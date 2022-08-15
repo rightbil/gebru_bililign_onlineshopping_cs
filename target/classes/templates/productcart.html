@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
+<head th:replace="base :: baseheader">
+    <title>My Cart</title>
+</head>
+<body>
+<div th:replace="base :: navlinks"></div>
+<div class="slider-item">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+            <div class="col-md-6 col-sm-12 <!--ftco-animate-->">
+                <h1 class="mb-4">Product(s) In Cart</h1>
+                <button type="submit" id="js-placeOrder"  class="btn btn-light" > Place Order </button>
+<!--                <button type = "submit" id="js-emptyCart" class="btn btn-light">-->
+<!--                    <a class = "btn btn-light" th:href="@{/product/mycart}"> Empty MyCart </a>-->
+<!--                </button>-->
+             <span>
+                    <a class = "btn btn-light" th:href="@{/product/emptycart}"> Empty MyCart </a>
+             </span>
+
+                <table class="table .table-bordered">
+                    <tr>
+                        <th> Product Code</th>
+                        <th> Product Name</th>
+                        <th> Product Vendor</th>
+                        <th> Price</th>
+                        <th> Quantity</th>
+                        <th> Total Price </th>
+                        <th> Delivery Date </th>
+                        <th> Delivery Time </th>
+                    </tr>
+                    <tr th:if="${cc.isEmpty()}"> You don't have items in your cart</tr>
+                    <tr th:each="c: ${cc}">
+                        <td>[[${c.productCode}]]</td>
+                        <td>[[${c.productName}]]</td>
+                        <td>[[${c.productVendor}]]</td>
+                        <td>$ [[${c.buyPrice}]]</td>
+                        <td>[[${c.itemsQuantity}]]</td>
+                        <td>$[[${c.totalPrice}]]</td>
+                        <td>[[${c.deliveryDate}]]</td>
+                        <td>[[${c.deliveryTime}]]</td>
+
+                        <td> <span>
+                            <a class="btn btn-light" th:href="@{/cart/{productcode}(id=${c.productCode})}"> Add More </a>
+                                    <a class="btn btn-light" th:href="@{/cart/{productcode}(id=${c.productCode})}"> Reduce </a>
+                                    <a class="btn btn-light" th:href="@{/product/detail/{productcode}(productcode=${c.productCode})}">Remove</a>
+<!--                                    <a class="btn btn-light"-->
+<!--                                       th:href="@{/product/detail/{productcode}(productcode=${c.productCode})}">Empty-->
+<!--                                        MyCart</a>-->
+                                </span>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script src="../static/js/os.js"></script>-->
+</body>
+</html>

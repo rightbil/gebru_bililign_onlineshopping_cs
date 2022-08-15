@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="Empty my cart and detail page and css fixes. added 140356.">
+      <change afterPath="$PROJECT_DIR$/rightbigebru_bililign_onlineshopping_cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Record" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/CustomerController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Orders.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/CustomerService.java" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/ProductService.java" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2CzLPxyQBoajrOJ1oCyTWz2SI0J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/bgebru/Desktop/LostAndFound/CSBakupAug151255/onlineshopping",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "f35bc06dfe2f9ddb3396e450460275e3"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "mariadb"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources/Lateruse" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.OnlineshoppingApplication">
+    <configuration name="dev.cs.onlineshopping.controllers in onlineshopping" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="onlineshopping" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.cs.onlineshopping.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.cs.onlineshopping.controllers" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="products.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/onlineshopping/templates/products.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="OnlineshoppingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="onlineshopping" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="dev.cs.onlineshopping.OnlineshoppingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.products.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="" />
+      <created>1659800448599</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659800448599</updated>
+      <workItem from="1659800450702" duration="4453000" />
+      <workItem from="1659807240338" duration="600000" />
+      <workItem from="1659809438467" duration="5387000" />
+      <workItem from="1659818479096" duration="20156000" />
+      <workItem from="1659891059187" duration="17837000" />
+      <workItem from="1659977052118" duration="1938000" />
+      <workItem from="1659991617728" duration="2716000" />
+      <workItem from="1660016745655" duration="12359000" />
+      <workItem from="1660050107442" duration="2075000" />
+      <workItem from="1660089389667" duration="27350000" />
+      <workItem from="1660188840488" duration="13333000" />
+      <workItem from="1660224776341" duration="10605000" />
+      <workItem from="1660309326944" duration="2681000" />
+      <workItem from="1660322471993" duration="3177000" />
+      <workItem from="1660326389614" duration="31201000" />
+      <workItem from="1660427437941" duration="18997000" />
+      <workItem from="1660450186838" duration="12349000" />
+      <workItem from="1660535708758" duration="3438000" />
+      <workItem from="1660539613243" duration="87000" />
+      <workItem from="1660539833545" duration="3028000" />
+    </task>
+    <task id="LOCAL-00001" summary="Customer Controller  GetMapping methode created.">
+      <created>1660206067554</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660206067554</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Product Repo, Service , product and product by page are added.">
+      <created>1660338637326</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660338637326</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add to cart is working, product detail nav is also done.">
+      <created>1660367264186</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660367264186</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Uitl class is added, Js is connected for testing, MyCart is fixed and also added estimated delivery of shipping.">
+      <created>1660449011503</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660449011503</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Uitl class is added, Js is connected for testing, MyCart is fixed and also added estimated delivery of shipping.">
+      <created>1660449057193</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660449057193</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Empty my cart and detail page and css fixes. added 140356.">
+      <created>1660463803274</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660463803274</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Customer Controller  GetMapping methode created." />
+    <MESSAGE value="Product Repo, Service , product and product by page are added." />
+    <MESSAGE value="Product Repo, Service , product and product by page are added(2)." />
+    <MESSAGE value="Add to cart is working, product detail nav is also done." />
+    <MESSAGE value="Uitl class is added, Js is connected for testing, MyCart is fixed and also added estimated delivery of shipping." />
+    <MESSAGE value="Empty my cart and detail page and css fixes. added 140356." />
+    <option name="LAST_COMMIT_MESSAGE" value="Empty my cart and detail page and css fixes. added 140356." />
+  </component>
+</project>

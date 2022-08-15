@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
+<head th:replace="base :: baseheader">
+    <title>Product Details </title>
+</head>
+<style>
+
+    table {
+        width: 100%;
+    }
+
+    table td, th {
+        white-space: nowrap; /** added **/
+    }
+
+    table td:last-child {
+        width: 100%;
+    }
+
+</style>
+<body>
+<div th:replace="base :: navlinks"></div>
+<div class="slider-item">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+            <div class="col-md-6 col-sm-12 <!--ftco-animate-->">
+                <h1 class="mb-4">Product Details</h1>
+                <h5>Name: <span th:text="${product.productName}"></span> </h5>
+
+                <h5> Product Scale:</h5>
+                <p th:text="${product.productScale}"></p>
+                <h5> Product Vendor: </h5>
+                <p th:text="${product.productVendor}"></p>
+                <h5> MSRP: </h5>
+                <p th:text="${product.MSRP}"></p>
+                <h5> Description: </h5> <p th:text="${product.productDescription}"></p>
+                <span> <a class="btn btn-light css-button " th:href="@{/product}">Back to Product List</a> </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="base :: footer "></div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
+<head th:replace="base :: baseheader">
+    <title>Product Details </title>
+ </head>
+<style>
+
+    table{
+        width:100%;
+    }
+    table td,th{
+        white-space: nowrap;  /** added **/
+    }
+    table td:last-child{
+        width:100%;
+    }
+
+</style>
+<body>
+<div th:replace="base :: navlinks"></div>
+<div class="slider-item">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+            <div class="col-md-6 col-sm-12 <!--ftco-animate-->">
+                  <h1 class="mb-4">Online Shopping</h1>
+                      <table class="table .table-bordered">
+                    <tr>
+                        <th> </th>
+                        <th> Name</th>
+                        <th> Product Scale</th>
+                        <th> Product Vendor</th>
+                        <th> MSRP</th>
+                        <th> Product Description</th>
+                    </tr>
+                    <tr th:each="p: ${product}">
+                        <td> <span> <a class="btn btn-light css-button " th:href="@{/product}">Back to Product List</a> </span> </td>
+                        <td>[[${p.productName}]]</td>
+                        <td>[[${p.productScale}]]</td>
+                        <td>[[${p.productVendor}]]</td>
+                        <td>[[${p.MSRP}]]</td>
+                        <td>[[${p.productDescription}]]</td>
+                      </tr>
+                </table>
+<!--                presentstaion alterantive -->
+
+
+
+<!--                <td> <span> <a class="btn btn-light css-button " th:href="@{/product}">Back to Product List</a> </span> </td>-->
+                Name:          <p th:text="${product.productName}"></p>
+                Product Scale: <p th:text="${product.productScale}"></p>
+                Product Vendor:<p th:text="${product.productVendor}"></p>
+                MSRP:          <p th:text="${product.MSRP}"></p>
+<!--                Description: <p th:hspace="100" th:height="100" th:text ="${product.productDescription}"> </p>-->
+                <span> <a class="btn btn-light css-button " th:href="@{/product}">Back to Product List</a> </span>
+            </div>
+          </div>
+    </div>
+</div>
+<div th:replace="base :: footer "></div>
+</body>
+</html>

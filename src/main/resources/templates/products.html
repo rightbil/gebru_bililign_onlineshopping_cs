@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="base :: baseheader">
+     <title>Product List</title>
+<!--    <meta charset="utf-8" />-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />-->
+<!--    &lt;!&ndash; css bootstrap link &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"-->
+<!--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />-->
+
+<!--    &lt;!&ndash;font&ndash;&gt;-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet" />-->
+<!--    <link rel="stylesheet" href="os.css" />-->
+</head>
+<body class ="css-background-color">
+<div th:replace="base :: navlinks"></div>
+<div class="slider-item">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+            <div class="col-md-6 col-sm-12 <!--ftco-animate-->">
+                <h1 class="mb-4">Online Shopping</h1>
+                <table class="table .table-bordered css-odd-rows">
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product Code</th>
+                        <th>Product Line</th>
+                        <th>Quantity InStock</th>
+                        <th>Price</th>
+                        <th>Finalize your orders </th>
+                    </tr>
+                    <tr th:each="p: ${products}">
+                        <td>[[${p.productName}]]</td>
+                        <td>[[${p.productCode}]]</td>
+                        <td>[[${p.productLine}]]</td>
+                        <td>[[${p.quantityInStock}]]</td>
+                        <td>[[${p.buyPrice}]]</td>
+
+                        <!--                            //TODO needs based on security-->
+                        <td>
+                            <a class="btn btn-light css-button"
+                               th:href="@{/product/detail/{productcode}(productcode=${p.productCode})}">Detail</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-light css-button js-product-addtocart"
+                               th:href="@{/product/cart/{productcode}(productcode=${p.productCode})}">Add to
+                                Cart</a>
+                        </td>
+                        <!--                            TODO for Admin only-->
+                        <td>
+                            <a class="btn btn btn-light css-button"
+                               th:href="@{/update/{productcode}(id=${p.productCode})}">Update</a>
+                        </td>
+                        <td>
+                            <a class="btn btn btn-light css-button"
+                               th:href="@{/delete/{productcode}(id=${p.productCode})}">Delete</a>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- products pagination -->
+                <nav aria-label="Pagination" th:if="${products.totalPages gt 0}">
+                    <ul class="pagination justify-content-center font-weight-bold">
+                        <li class="page-item" th:classappend="${products.number eq 0} ? 'disabled'">
+                            <a class="page-link"
+                               th:href="@{/product/?page={id}(id=${products.number lt 2 ? 1 : products.number})}"
+                               aria-label="Previous" title="Previous Page" data-toggle="tooltip">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item" th:classappend="${i eq products.number + 1} ? 'active'"
+                            th:each="i : ${#numbers.sequence( 1, products.totalPages, 1)}">
+                            <a class="page-link" th:href="@{/product/?page={id}(id=${i})}" th:text="${i}"
+                               th:title="${'Page '+ i}" data-toggle="tooltip"></a>
+                        </li>
+                        <li class="page-item"
+                            th:classappend="${products.number + 1 eq products.totalPages} ? 'disabled'">
+                            <a class="page-link" th:href="@{/product/?page={id}(id=${products.number + 2})}"
+                               aria-label="Next" title="Next Page" data-toggle="tooltip">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="base :: footer "></div>
+<script src="../static/js/os.js"></script>
+</body>
+
+</html>
