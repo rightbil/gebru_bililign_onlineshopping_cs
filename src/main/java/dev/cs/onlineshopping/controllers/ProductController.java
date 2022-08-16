@@ -23,7 +23,7 @@ public class ProductController {
     @GetMapping()
     public String showAllProducts(HttpServletRequest request, Model model) {
         int page = 0;
-        int size = 10;
+        int size = 8;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
             page = Integer.parseInt(request.getParameter("page")) - 1;
         }

@@ -10,6 +10,9 @@ import javax.persistence.*;
 @Table(name = "product")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Embeddable()
+//@NamedQueries({
+//@NamedQuery(name = "sqlSearchProductByProductCode", query = "FROM Product p where p.productCode=:productcode")
+//})
 public class Product{
     @Id
     @Setter(AccessLevel.PRIVATE)

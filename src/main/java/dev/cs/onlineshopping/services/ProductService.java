@@ -12,9 +12,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
 @Service
 public class ProductService {
-    Map<String, Integer> mapOfCart = new HashMap<>();
+   static Map<String, Integer> mapOfCart = new HashMap<>();
     private final ProductRepository productRepository;
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
@@ -34,6 +35,7 @@ public class ProductService {
     // product quantiry shall be reduced by the item quantity but chek at the time of adding to orders too
     public List<ProductDTO> showCartItems() {
         List<ProductDTO> cartProduct = new ArrayList<>();
+        //double static totalCharges=1000;
         for (String key : mapOfCart.keySet()) {
             ProductDTO cartItem = new ProductDTO();
             cartItem.setProductCode(productRepository.findByProductCode(key).getProductCode());
@@ -57,6 +59,20 @@ public class ProductService {
             mapOfCart.put(product.getProductCode(), v + 1);
 
         }
+    }
+    /***
+     *
+     * @return
+     */
+    public static AtomicReference<Integer> totalPrducts() {
+        AtomicReference<Integer> atomicSum = new AtomicReference<>(0);
+        mapOfCart.entrySet().forEach(e -> e.setValue(atomicSum.accumulateAndGet(e.getValue(), (x, y) -> x + y)));
+        return atomicSum;
+    }
+    //TODO -- come and fix this part
+    public static double totalCharges() {
+        double sumOfQuantityIncart = 9.00;
+        return sumOfQuantityIncart;
     }
     public void clearCart() {
         mapOfCart.clear();

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 @Controller
-@RequestMapping("/customer")
+//@RequestMapping("/")
 public class CustomerController {
    private final CustomerService customerService;
     public CustomerController( CustomerService customerService) {
@@ -18,7 +18,7 @@ public class CustomerController {
     @GetMapping("/")
     public String findAllCustomers(HttpServletRequest request, Model model) {
         int page = 0;
-        int size = 20;
+        int size = 8;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
             page = Integer.parseInt(request.getParameter("page")) - 1;
         }
@@ -27,7 +27,7 @@ public class CustomerController {
         }
 
         model.addAttribute("customers", customerService.listAllCustomers(PageRequest.of(page, size)));
-        return "index";
+        return "customers";
     }
     @GetMapping("/page")
     public String findAllCustomersByPage(HttpServletRequest request, @RequestParam("page") int page, Model model) {
@@ -40,7 +40,7 @@ public class CustomerController {
             size = Integer.parseInt(request.getParameter("size"));
         }
         model.addAttribute("customers", customerService.listAllCustomers(PageRequest.of(page, size)));
-        return "index";
+        return "customers";
     }
 
 
