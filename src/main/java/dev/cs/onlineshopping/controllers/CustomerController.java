@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 @Controller
-//@RequestMapping("/")
+@RequestMapping("/customer")
 public class CustomerController {
    private final CustomerService customerService;
     public CustomerController( CustomerService customerService) {
