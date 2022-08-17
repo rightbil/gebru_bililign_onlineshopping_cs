@@ -11,12 +11,14 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
-   private final CustomerService customerService;
-    public CustomerController( CustomerService customerService) {
-            this.customerService = customerService;
+    private final CustomerService customerService;
+    public CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
     }
-    @GetMapping("/")
-    public String findAllCustomers(HttpServletRequest request, Model model) {
+
+
+    @GetMapping()
+    public String defaultAdminDashboard(HttpServletRequest request, Model model) {
         int page = 0;
         int size = 8;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
@@ -25,10 +27,10 @@ public class CustomerController {
         if (request.getParameter("size") != null && !request.getParameter("size").isEmpty()) {
             size = Integer.parseInt(request.getParameter("size"));
         }
-
         model.addAttribute("customers", customerService.listAllCustomers(PageRequest.of(page, size)));
-        return "customers";
+        return "admindb";
     }
+
     @GetMapping("/page")
     public String findAllCustomersByPage(HttpServletRequest request, @RequestParam("page") int page, Model model) {
         //int page = 0;
@@ -40,13 +42,11 @@ public class CustomerController {
             size = Integer.parseInt(request.getParameter("size"));
         }
         model.addAttribute("customers", customerService.listAllCustomers(PageRequest.of(page, size)));
-        return "customers";
+        return "admindb";
     }
-
-
 // localhost:[port]/clearCache
-      // autowire cache manager
-        // clear all cache using cache manager
+    // autowire cache manager
+    // clear all cache using cache manager
 //        @RequestMapping(value = "clearCache")
 //        @Scheduled(cron = "0 0/30 * * * ?") // every 30 minutes
 //        public void clearCache() {
@@ -64,7 +64,6 @@ public class CustomerController {
 //    public HomeController(CustomerService customerService) {
 //        this.customerService = customerService;
 //    }
-
 //    @GetMapping("/")
 //    public @ResponseBody List<Customer> listAllEmployees() {
 //        return customerService.listAllCustomers();

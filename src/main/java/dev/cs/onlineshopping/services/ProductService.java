@@ -91,4 +91,17 @@ public class ProductService {
         mapOfCart.put(productcode, mapOfCart.get(productcode) + 1);
     }
 
+    // CRUD prodcuts
+    public void saveProduct(Product product){
+        productRepository.save(product);
+    }
+    // TODO explored
+    public void updateProduct(String productCode , Product product){
+        productRepository.save(product);
+    }
+    public void deleteProduct(String productCode){
+
+        productRepository.deleteById(productCode);
+    }
+
 }

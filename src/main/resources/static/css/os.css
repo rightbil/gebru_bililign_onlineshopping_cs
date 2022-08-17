@@ -2,6 +2,11 @@
 .css-background-color{
     background-color: whitesmoke;
 }
+.css-caption{
+
+    color:gray;
+    caption-side: top;
+}
 table{
     width:100%;
 }
