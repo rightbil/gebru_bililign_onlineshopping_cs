@@ -15,7 +15,7 @@ import javax.persistence.*;
 //})
 public class Product{
     @Id
-    @Setter(AccessLevel.PRIVATE)
+//    @Setter(AccessLevel.PRIVATE)
     String productCode;// varchar(15) NOT NULL, composite key
     @Column(nullable = false, length = 70)
     String productName;// varchar(70) NOT NULL,

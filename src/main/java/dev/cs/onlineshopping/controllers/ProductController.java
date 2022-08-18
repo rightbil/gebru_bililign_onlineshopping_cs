@@ -1,5 +1,7 @@
 package dev.cs.onlineshopping.controllers;
 import dev.cs.onlineshopping.models.Product;
+import dev.cs.onlineshopping.models.ProductLine;
+import dev.cs.onlineshopping.services.ProductLineService;
 import dev.cs.onlineshopping.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -12,16 +14,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 @Controller
 @RequestMapping("/product")
 public class ProductController {
+    @Autowired
+    private ProductLineService productLineService;
     @Autowired
     private ProductService productService;
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
     // display all products for the customer - can also see the details or add to cart
-    @GetMapping()
+    @GetMapping
     public String showAllProducts(HttpServletRequest request, Model model) {
         int page = 0;
         int size = 8;
@@ -106,20 +114,62 @@ public class ProductController {
     // Add
     @GetMapping("/add")
     public String addProduct(Model model) {
+        System.out.println("/prodcut/add get is called" + productLineService.findAllProductLine().size());
+//
+//        Set<String> productcodes = new HashSet<>();
+//        for (ProductLine pl : productLineService.findAllProductLine()) {
+//            productcodes.add(pl.getProductLine());
+//
+//        }
         model.addAttribute("product", new Product());
+        model.addAttribute("productlines", productLineService.findAllProductLine());
         return "productadd";
     }
     @PostMapping("/add")
-    public String addingProduct(@Valid @ModelAttribute("product") Product product, BindingResult result,
-                                Model model) {
-        model.addAttribute("product", product);
-        if (result.hasErrors()) {
-            return "productadd";
-        } else {
-            // productRepository .saveUser(user);
+   public String addingProduct(@ModelAttribute("product") Product product,
+                               BindingResult result
+//                                Model model
+                              ) {
+
+        System.out.println("/product/add POST is called" + product.getProductCode() );
+        //TODO add productline later on
+//        model.addAttribute("product", product);
+//        if (result.hasErrors()) {
+//            return "productadd";
+//        } else {
+            Product p =  productService.findProductByCode(product.getProductCode());
+            if(p!=null) {
+                result.rejectValue("prodcutCode", "A product  exists with this code");
+            }
+            if(result.hasErrors())
+            {
+                return "productadd";
+            }
+//            p.setProductCode(product.getProductCode());
+//            p.setProductName(product.getProductName());
+//            p.setProductLine(product.getProductLine());
+//            p.setProductScale(product.getProductScale());
+//            p.setProductVendor(product.getProductVendor());
+//            p.setProductDescription(product.getProductDescription());
+//            p.setQuantityInStock(product.getQuantityInStock());
+//            p.setBuyPrice(product.getBuyPrice());
+//            p.setMSRP(product.getMSRP());
             productService.saveProduct(product);
-            model.addAttribute("message", "Product was created");
-        }
+            System.out.println("Product was created");
+//           // model.addAttribute("message", "Product was created");
+//        }
+        return "redirect:/product/admin";
+    }
+    @PostMapping("/order")
+    public String saveMyOrders() {
+// use session get the  userid
+// get customerid using user id
+// get productcode and quanity form mymap {all productcode , with quantities }
+// insert productCode to order table
+// capture the orderId (Pk)
+// pair orderId with each productcode from mymap and orderID() insert into orderdetails
+// at the same time update product quantitry
+// empty mymap
         return "redirect:/product/admin";
     }
     // Crud operations product

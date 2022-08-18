@@ -1,4 +1,4 @@
-package dev.cs.onlineshopping.devmodels;
+package dev.cs.onlineshopping.models;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;

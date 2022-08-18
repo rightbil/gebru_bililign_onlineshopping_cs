@@ -1,4 +1,5 @@
 package dev.cs.onlineshopping.models;
+import dev.cs.onlineshopping.security.User;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -76,5 +77,7 @@ public class Customer {
     //            nullable = false
     //            , foreignKey = @ForeignKey(name = "salesRepEmployeeNumber"))
     //    private Employee employee;
-
+//Relation with User
+    @OneToOne(mappedBy = "customer" )
+    private User user;
 }

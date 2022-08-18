@@ -15,7 +15,10 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 @Service
 public class ProductService {
-   static Map<String, Integer> mapOfCart = new HashMap<>();
+    /***
+     * productcode (pk) and the number of quantities you are purchasing
+     */
+    static Map<String, Integer> mapOfCart = new HashMap<>();
     private final ProductRepository productRepository;
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
@@ -60,10 +63,6 @@ public class ProductService {
 
         }
     }
-    /***
-     *
-     * @return
-     */
     public static AtomicReference<Integer> totalPrducts() {
         AtomicReference<Integer> atomicSum = new AtomicReference<>(0);
         mapOfCart.entrySet().forEach(e -> e.setValue(atomicSum.accumulateAndGet(e.getValue(), (x, y) -> x + y)));
@@ -90,18 +89,19 @@ public class ProductService {
     public void addQuantityInCart(String productcode) {
         mapOfCart.put(productcode, mapOfCart.get(productcode) + 1);
     }
-
     // CRUD prodcuts
-    public void saveProduct(Product product){
+    public void saveProduct(Product product) {
         productRepository.save(product);
     }
     // TODO explored
-    public void updateProduct(String productCode , Product product){
+    public void updateProduct(String productCode, Product product) {
         productRepository.save(product);
     }
-    public void deleteProduct(String productCode){
-
+    public void deleteProduct(String productCode) {
         productRepository.deleteById(productCode);
+    }
+    public Product findProductByCode(String productCode) {
+        return productRepository.findByProductCode(productCode);
     }
 
 }
