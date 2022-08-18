@@ -1,8 +1,10 @@
 package dev.cs.onlineshopping.models;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.lang.module.FindException;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,7 +23,7 @@ public class Product{
     String productName;// varchar(70) NOT NULL,
 //    @Id
 //    @Setter(AccessLevel.PRIVATE)
-    String productLine;// varchar(50) NOT NULL, Foreign key
+ //   String productLine;// varchar(50) NOT NULL, Foreign key
     @Column(nullable = false, length = 50)
     String productScale;// varchar(10) NOT NULL,
     @Column(nullable = false, length = 50)
@@ -34,4 +36,11 @@ public class Product{
     double buyPrice;// decimal(10,2) NOT NULL,
     @Column(nullable = false, precision = 10, scale = 2)
     double MSRP;// decimal(10,2) NOT NULL
+
+//    Relationships
+//    @JsonIgnore
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "productLine")
+    private ProductLine productLine;
+
 }

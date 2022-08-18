@@ -97,6 +97,7 @@ public class ProductController {
             size = Integer.parseInt(request.getParameter("size"));
         }
         model.addAttribute("products", productService.showAllProducts(PageRequest.of(page, size)));
+        System.out.println("from product admin controller calls" + productService.findProductByCode("S00001"));
         return "adminproduct";
     }
     @GetMapping("/admin/page")
@@ -115,7 +116,7 @@ public class ProductController {
     @GetMapping("/add")
     public String addProduct(Model model) {
         System.out.println("/prodcut/add get is called" + productLineService.findAllProductLine().size());
-//
+
 //        Set<String> productcodes = new HashSet<>();
 //        for (ProductLine pl : productLineService.findAllProductLine()) {
 //            productcodes.add(pl.getProductLine());
@@ -123,41 +124,35 @@ public class ProductController {
 //        }
         model.addAttribute("product", new Product());
         model.addAttribute("productlines", productLineService.findAllProductLine());
+//        model.addAttribute("productlines", productcodes);
+
         return "productadd";
     }
     @PostMapping("/add")
-   public String addingProduct(@ModelAttribute("product") Product product,
-                               BindingResult result
+    public String addingProduct(@ModelAttribute("product") Product product,
+                                BindingResult result
 //                                Model model
-                              ) {
-
-        System.out.println("/product/add POST is called" + product.getProductCode() );
+                               ) {
+        System.out.println("/product/add POST is called" + product.getProductCode());
         //TODO add productline later on
 //        model.addAttribute("product", product);
 //        if (result.hasErrors()) {
 //            return "productadd";
 //        } else {
-            Product p =  productService.findProductByCode(product.getProductCode());
-            if(p!=null) {
-                result.rejectValue("prodcutCode", "A product  exists with this code");
-            }
-            if(result.hasErrors())
-            {
-                return "productadd";
-            }
-//            p.setProductCode(product.getProductCode());
-//            p.setProductName(product.getProductName());
-//            p.setProductLine(product.getProductLine());
-//            p.setProductScale(product.getProductScale());
-//            p.setProductVendor(product.getProductVendor());
-//            p.setProductDescription(product.getProductDescription());
-//            p.setQuantityInStock(product.getQuantityInStock());
-//            p.setBuyPrice(product.getBuyPrice());
-//            p.setMSRP(product.getMSRP());
-            productService.saveProduct(product);
-            System.out.println("Product was created");
-//           // model.addAttribute("message", "Product was created");
-//        }
+        Product p = productService.findProductByCode(product.getProductCode());
+        if (p != null) {
+            result.rejectValue("prodcutCode", "A product  exists with this code");
+        }
+        if (result.hasErrors()) {
+            return "productadd";
+        }
+
+
+
+
+
+        productService.saveProduct(product);
+        System.out.println("Product was created");
         return "redirect:/product/admin";
     }
     @PostMapping("/order")

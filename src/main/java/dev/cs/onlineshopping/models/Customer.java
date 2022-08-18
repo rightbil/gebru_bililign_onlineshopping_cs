@@ -31,7 +31,7 @@ import javax.persistence.*;
 /***
  * the current max customer number is 496 so new once start form 500 , max is 999
  */
-@SequenceGenerator(name = "customerNumber_Seq", initialValue = 500, allocationSize = 999)
+@SequenceGenerator(name = "customerNumber_Seq", initialValue = 500, allocationSize = 1)
 public class Customer {
     //TODO    private static final Logger log = LoggerFactory.getLogger(LogExample.class);
     @Id

@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database." />
+    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database added these files too.">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6985f3aa-94c0-4862-addf-d66c1f688013.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6985f3aa-94c0-4862-addf-d66c1f688013.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/ProductLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/ProductLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminproduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productadd.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productadd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/OrderDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/OrderDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Orders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/ProductLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/ProductLine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminproduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productadd.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productadd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productlist.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,35 +85,35 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/bgebru/Desktop/LostAndFound/CSBakupAug151255/onlineshopping",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "spring.configuration.checksum": "f35bc06dfe2f9ddb3396e450460275e3"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bgebru/Desktop/LostAndFound/CSBakupAug151255/onlineshopping&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;f35bc06dfe2f9ddb3396e450460275e3&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
@@ -193,7 +214,8 @@
       <workItem from="1660592570635" duration="2252000" />
       <workItem from="1660601333312" duration="19059000" />
       <workItem from="1660665001283" duration="104000" />
-      <workItem from="1660671440880" duration="56052000" />
+      <workItem from="1660671440880" duration="65039000" />
+      <workItem from="1660829151442" duration="3440000" />
     </task>
     <task id="LOCAL-00001" summary="Customer Controller  GetMapping methode created.">
       <created>1660206067554</created>
@@ -300,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660792925069</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database added these files too.">
+      <created>1660793017535</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1660793017535</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +361,8 @@
     <MESSAGE value="Security main class was removed and customer controller mapping was changed." />
     <MESSAGE value="Submenu for internal dashboard customer and product (CRUD are on progress )and respective pages are added." />
     <MESSAGE value="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database." />
-    <option name="LAST_COMMIT_MESSAGE" value="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database." />
+    <MESSAGE value="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database added these files too." />
+    <option name="LAST_COMMIT_MESSAGE" value="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database added these files too." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

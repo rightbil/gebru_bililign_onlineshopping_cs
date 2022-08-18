@@ -10,7 +10,7 @@ import java.util.Date;
 @Entity // make it JPA entity
 @Table(name = "orders") // make table name "customers" in db
 @FieldDefaults(level = AccessLevel.PRIVATE) //make all fields access specifier private
-@SequenceGenerator(name = "orderNumber_Seq", initialValue = 10500, allocationSize = 20000)
+@SequenceGenerator(name = "orderNumber_Seq", initialValue = 10500, allocationSize = 1)
 public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orderNumber_Seq")

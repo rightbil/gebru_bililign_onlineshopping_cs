@@ -13,7 +13,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "orderdetail")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@SequenceGenerator(name = "orderNumber_Seq", initialValue = 10500, allocationSize = 20000)
+@SequenceGenerator(name = "orderNumber_Seq", initialValue = 10500, allocationSize = 1)
 public class OrderDetail implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orderNumber_Seq")

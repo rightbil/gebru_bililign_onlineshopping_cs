@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "productline")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@SequenceGenerator(name = "orderNumber_Seq", initialValue = 10500, allocationSize = 20000)
+@SequenceGenerator(name = "orderNumber_Seq", initialValue = 10500, allocationSize = 1)
 public class ProductLine {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orderNumber_Seq")
@@ -26,4 +26,5 @@ public class ProductLine {
 //    @Lob
     @Column(columnDefinition = "mediumBLOB")
     String image;// mediumblob,
+
 }

@@ -17,7 +17,6 @@
             <tr>
                 <td>Code</td>
                 <th>Name</th>
-                <th>Line</th>
                 <th>Scale</th>
                 <th>Vendor</th>
                 <th>Quantity</th>
@@ -29,7 +28,6 @@
             <tr th:each="p: ${products}">
                 <td>[[${p.productCode}]]</td>
                 <td>[[${p.productName}]]</td>
-                <td>[[${p.productLine}]]</td>
                 <td>[[${p.productScale}]]</td>
                 <td>[[${p.productVendor}]]</td>
                 <td>[[${p.quantityInStock}]]</td>
@@ -37,7 +35,7 @@
                 <td>[[${p.MSRP}]]</td>
                 <td class="css-description">[[${p.productDescription}]]</td>
 
-                <!--                            //TODO Admin can update , add or delete product or sort -->
+                <!--  //TODO Admin can update , add or delete product or sort -->
                 <td>
                     <a class="btn btn-light css-button"
                        th:href="@{/product/detail/{productcode}(productcode=${p.productCode})}">Update</a>
