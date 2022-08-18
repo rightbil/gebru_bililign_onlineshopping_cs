@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="Submenu for internal dashboard customer and product (CRUD are on progress )and respective pages are added.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/devmodels/ProductLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/ProductLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productadd.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productadd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productcart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/devmodels/ProductLine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productcart.html" afterDir="false" />
-    </list>
+    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,7 +193,7 @@
       <workItem from="1660592570635" duration="2252000" />
       <workItem from="1660601333312" duration="19059000" />
       <workItem from="1660665001283" duration="104000" />
-      <workItem from="1660671440880" duration="55642000" />
+      <workItem from="1660671440880" duration="56052000" />
     </task>
     <task id="LOCAL-00001" summary="Customer Controller  GetMapping methode created.">
       <created>1660206067554</created>
@@ -307,7 +286,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660706061571</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database.">
+      <created>1660792911338</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660792911338</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database.">
+      <created>1660792925069</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1660792925069</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +331,8 @@
     <MESSAGE value="Security pkg is added. longin, index and registration security related pages are included." />
     <MESSAGE value="Security main class was removed and customer controller mapping was changed." />
     <MESSAGE value="Submenu for internal dashboard customer and product (CRUD are on progress )and respective pages are added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Submenu for internal dashboard customer and product (CRUD are on progress )and respective pages are added." />
+    <MESSAGE value="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database." />
+    <option name="LAST_COMMIT_MESSAGE" value="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
