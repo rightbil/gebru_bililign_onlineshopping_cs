@@ -1,5 +1,5 @@
 package dev.cs.onlineshopping.services;
-import dev.cs.onlineshopping.dtos.ProductDTO;
+import dev.cs.onlineshopping.dtos.ProductCartDTO;
 import dev.cs.onlineshopping.models.Product;
 import dev.cs.onlineshopping.repositories.ProductRepository;
 import dev.cs.onlineshopping.utility.Util;
@@ -12,21 +12,25 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.Collectors;
 @Service
 public class ProductService {
     /***
      * productcode (pk) and the number of quantities you are purchasing
      */
-    static Map<String, Integer> mapOfCart = new HashMap<>();
+    private final short defaultCartQuantity = (short) 1;
+    static Map<String, Short> mapOfCart = new HashMap<>();
     private final ProductRepository productRepository;
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
     public Page<Product> showAllProducts(PageRequest pageRequest) {
+//TODO filter this based on quantity > 0
+        List<Product> page = productRepository.findAll(pageRequest).stream()
+                .filter(product -> product.getQuantityInStock() > 0).collect(Collectors.toList());
         return productRepository.findAll(pageRequest);
     }
-    public Product showProductDetail(@Param("productcode") String productCode) {
+    public Product getProductDetail(@Param("productcode") String productCode) {
         return productRepository.findByProductCode(productCode);
     }
     //TODO should be Orders,
@@ -36,11 +40,10 @@ public class ProductService {
     // an email. let us know if you can give us a feed back on your purchase experiance.
     // Email
     // product quantiry shall be reduced by the item quantity but chek at the time of adding to orders too
-    public List<ProductDTO> showCartItems() {
-        List<ProductDTO> cartProduct = new ArrayList<>();
-        //double static totalCharges=1000;
+    public List<ProductCartDTO> showCartItems() {
+        List<ProductCartDTO> cartProduct = new ArrayList<>();
         for (String key : mapOfCart.keySet()) {
-            ProductDTO cartItem = new ProductDTO();
+            ProductCartDTO cartItem = new ProductCartDTO();
             cartItem.setProductCode(productRepository.findByProductCode(key).getProductCode());
             cartItem.setProductName(productRepository.findByProductCode(key).getProductName());
             cartItem.setProductVendor(productRepository.findByProductCode(key).getProductVendor());
@@ -56,18 +59,18 @@ public class ProductService {
     }
     public void addItemToCart(Product product) {
         if (!mapOfCart.containsKey(product.getProductCode())) {
-            mapOfCart.put(product.getProductCode(), 1);
+            mapOfCart.put(product.getProductCode(), defaultCartQuantity);
         } else {
-            Integer v = mapOfCart.get(product.getProductCode());
-            mapOfCart.put(product.getProductCode(), v + 1);
-
+            Short currentQuantity = mapOfCart.get(product.getProductCode());
+            mapOfCart.put(product.getProductCode(), ++currentQuantity);
         }
     }
-    public static AtomicReference<Integer> totalPrducts() {
-        AtomicReference<Integer> atomicSum = new AtomicReference<>(0);
-        mapOfCart.entrySet().forEach(e -> e.setValue(atomicSum.accumulateAndGet(e.getValue(), (x, y) -> x + y)));
-        return atomicSum;
-    }
+    // TODO
+//    public static AtomicReference<Short> totalPrducts() {
+//        AtomicReference<Short> atomicSum = new AtomicReference<>();
+//        mapOfCart.entrySet().forEach(e -> e.setValue(atomicSum.accumulateAndGet(e.getValue(), (x, y) -> x + y)));
+//        return atomicSum;
+//    }
     //TODO -- come and fix this part
     public static double totalCharges() {
         double sumOfQuantityIncart = 9.00;
@@ -76,19 +79,20 @@ public class ProductService {
     public void clearCart() {
         mapOfCart.clear();
     }
-    public void removeItemfromCart(String productCode) {
+    public void removeCartItem(String productCode) {
         mapOfCart.remove(productCode);
     }
-    public void reduceQuantiryfromCart(String productCode) {
-        int currentProductQuantity = mapOfCart.get(productCode);
-        if (currentProductQuantity > 1) {
-            mapOfCart.put(productCode, currentProductQuantity - 1);
-        } else
-            removeItemfromCart(productCode);
-    }
-    public void addQuantityInCart(String productcode) {
-        mapOfCart.put(productcode, mapOfCart.get(productcode) + 1);
-    }
+    //    public void reduceQuantiryfromCart(String productCode) {
+//        Short currentProductQuantity = mapOfCart.get(productCode);
+//        if (currentProductQuantity > 1) {
+//            mapOfCart.put(productCode, currentProductQuantity - defaultCartQuantity);
+//        } else
+//            removeItemfromCart(productCode);
+//    }
+//    public void addQuantityInCart(String productcode) {
+//        Short q = mapOfCart.get(productcode);
+//        mapOfCart.put(productcode,q);
+//    }
     // CRUD prodcuts
     public void saveProduct(Product product) {
         productRepository.save(product);
@@ -97,11 +101,52 @@ public class ProductService {
     public void updateProduct(String productCode, Product product) {
         productRepository.save(product);
     }
-    public void deleteProduct(String productCode) {
-        productRepository.deleteById(productCode);
+    public Product findProductByProductCode(String productcode) {
+        return productRepository.findByProductCode(productcode);
     }
-    public Product findProductByCode(String productCode) {
-        return productRepository.findByProductCode(productCode);
+    //@Modifying
+    //@Query("DELETE FROM Product p where p.productCode =:productcode")
+    public void deleteProduct(String productcode) {
+        productRepository.delete(findProductByProductCode(productcode));
+    }
+    //    public void updateProduct(
+//              String productname
+//            , String productline
+//            , String productscale
+//            , String productvendor
+//            , String productDescription
+//            , double quantityInStock
+//            , double buyPrice
+//            , double MSRP) {
+//        productRepository.updateProductByFields(productname, productline, productscale, productvendor, productDescription, quantityInStock, buyPrice, MSRP);
+//
+//    }
+    public void displayCartContent() {
+        for (String key : mapOfCart.keySet()) {
+            System.out.println("Cart: ProductCode :" + key + "quantity in cart :" + mapOfCart.get(key));
+            Product p = findProductByProductCode(key);
+            System.out.println("Database: ProductCode :" + p.getProductCode() + "quantity in cart :" + p.getQuantityInStock());
+        }
+
+    }
+    public Short getQuantityInCart(String productCode) {
+        return mapOfCart.get(productCode);
+    }
+    /****
+     *
+     * @param quantityInStock to reduce pass -ve value to add pass positive value
+     */
+    public void decreaseProductQuantityByCart(Short quantityInStock, String productcode) {
+        System.out.println("Decrease Quantities is called with parameters :" + quantityInStock + "and " + productcode);
+        productRepository.decreaseAvailableProductQuantity(quantityInStock, productcode);
     }
 
+
+
+//    increaseAvailableProductQuantity
+
+    public void returnQuantityByCart(Short quantityInStock, String productcode) {
+        System.out.println("SDecrease Quantities is called with parameters :" + quantityInStock + "and " + productcode);
+        productRepository.decreaseAvailableProductQuantity(quantityInStock, productcode);
+    }
 }

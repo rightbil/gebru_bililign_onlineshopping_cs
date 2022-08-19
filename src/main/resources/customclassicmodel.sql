@@ -26,6 +26,11 @@ select  c.productLine, c.productCode, c.MSRP, c.buyPrice, c.productDescription, 
 Delete from cs.product;*/
 
 
+use cs;
+ALTER TABLE product DROP constraint FK71ytjxwdqw3950xadqx4e6dj3;
+
+describe product;
+
 INSERT INTO cs.orderdetail
 select  c.productCode, c.orderNumber, c.orderLineNumber, c.priceEach, c.quantityOrdered from classicmodels.OrderDetails as c ;
 
@@ -290,6 +295,9 @@ ALTER TABLE products ADD constraint  pk_productCode PRIMARY KEY  (productCode);
 ALTER TABLE products ADD CONSTRAINT productLine FOREIGN KEY  (productLine) REFERENCES productlines (productLine);
 #Drop Constraints for orders table #
 ALTER TABLE products DROP constraint customerNumber;
+FK71ytjxwdqw3950xadqx4e6dj3
+use
+ALTER TABLE product DROP constraint FK71ytjxwdqw3950xadqx4e6dj3;
 ALTER TABLE products Drop Index customerNumber;
 ALTER TABLE products DROP KEY  `PRIMARY`;
 /*Data for the table `products` */

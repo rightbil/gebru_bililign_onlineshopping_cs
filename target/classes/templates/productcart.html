@@ -36,15 +36,24 @@
                         <td>[[${c.productCode}]]</td>
                         <td>[[${c.productName}]]</td>
                         <td>[[${c.productVendor}]]</td>
-                        <td>$ [[${c.buyPrice}]]</td>
+                        <td>$[[${c.buyPrice}]]</td>
                         <td>[[${c.itemsQuantity}]]</td>
                         <td>$[[${c.totalPrice}]]</td>
                         <td>[[${c.deliveryDate}]]</td>
                         <td>[[${c.deliveryTime}]]</td>
 
+
+<!--                        <td>-->
+<!--                            <a class="btn btn-light css-button js-product-addtocart"-->
+<!--                               th:href="@{/product/cart/{productcode}(productcode=${p.productCode})}">Add to-->
+<!--                                Cart</a>-->
+<!--                        </td>-->
+
+
                         <td> <span>
-                            <a class="btn btn-light" th:href="@{/cart/{productcode}(id=${c.productCode})}"> Add More </a>
-                                    <a class="btn btn-light" th:href="@{/cart/{productcode}(id=${c.productCode})}"> Reduce </a>
+                            <a class="btn btn-light"  th:href="@{/product/cart/{productcode}(productcode=${c.productCode})}">More
+                                 </a>
+                                    <a class="btn btn-light" th:href="@{/product/cart/{productcode}(productcode=${c.productCode})}">Reduce</a>
                                     <a class="btn btn-light" th:href="@{/product/detail/{productcode}(productcode=${c.productCode})}">Remove</a>
 <!--                                    <a class="btn btn-light"-->
 <!--                                       th:href="@{/product/detail/{productcode}(productcode=${c.productCode})}">Empty-->

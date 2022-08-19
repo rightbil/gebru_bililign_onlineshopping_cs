@@ -22,6 +22,8 @@ import javax.persistence.*;
 //generates a constructor with 1 parameter for each field in your class.
 //Fields marked with @NonNull result in null checks on those parameters.
 @Data
+
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity // make it JPA entity
@@ -78,6 +80,7 @@ public class Customer {
     //            , foreignKey = @ForeignKey(name = "salesRepEmployeeNumber"))
     //    private Employee employee;
 //Relation with User
-    @OneToOne(mappedBy = "customer" )
-    private User user;
+//    @OneToOne(mappedBy = "customer" )
+//    private User user;
+       long UserId; // Fk from user table
 }

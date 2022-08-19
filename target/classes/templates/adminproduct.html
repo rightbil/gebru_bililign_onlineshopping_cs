@@ -38,11 +38,11 @@
                 <!--  //TODO Admin can update , add or delete product or sort -->
                 <td>
                     <a class="btn btn-light css-button"
-                       th:href="@{/product/detail/{productcode}(productcode=${p.productCode})}">Update</a>
+                       th:href="@{/product/update/{productcode}(productcode=${p.productCode})}">Update</a>
                 </td>
                 <td>
                     <a class="btn btn btn-light css-button"
-                       th:href="@{/delete/{productcode}(id=${p.productCode})}">Delete</a>
+                       th:href="@{/product/delete/{productcode}(productcode=${p.productCode})}">Delete</a>
                 </td>
             </tr>
         </table>

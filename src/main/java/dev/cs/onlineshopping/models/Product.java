@@ -23,7 +23,7 @@ public class Product{
     String productName;// varchar(70) NOT NULL,
 //    @Id
 //    @Setter(AccessLevel.PRIVATE)
- //   String productLine;// varchar(50) NOT NULL, Foreign key
+    String productLine;// varchar(50) NOT NULL, Foreign key
     @Column(nullable = false, length = 50)
     String productScale;// varchar(10) NOT NULL,
     @Column(nullable = false, length = 50)
@@ -39,8 +39,8 @@ public class Product{
 
 //    Relationships
 //    @JsonIgnore
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "productLine")
-    private ProductLine productLine;
+//    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//    @JoinColumn(name = "productLine")
+//    private ProductLine productLine;
 
 }
