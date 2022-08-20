@@ -11,13 +11,15 @@
         <div class="row slider-text align-items-center" data-scrollax-parent="true">
             <div class="col-md-6 col-sm-12 <!--ftco-animate-->">
                 <h1 class="mb-4">Product(s) In Cart</h1>
-<!--                TODO-->
-                <a th:href="@{/order}"><button type="submit" id="js-placeOrder"  class="btn btn-light" > Place Order </button> </a>
-<!--                <button type = "submit" id="js-emptyCart" class="btn btn-light">-->
-<!--                    <a class = "btn btn-light" th:href="@{/product/mycart}"> Empty MyCart </a>-->
-<!--                </button>-->
-             <span>
-                    <a class = "btn btn-light" th:href="@{/product/emptycart}"> Empty MyCart </a>
+                <!--                TODO-->
+                <a th:href="@{/order}">
+                    <button type="submit" id="js-placeOrder" class="btn btn-light"> Place Order</button>
+                </a>
+                <!--                <button type = "submit" id="js-emptyCart" class="btn btn-light">-->
+                <!--                    <a class = "btn btn-light" th:href="@{/product/mycart}"> Empty MyCart </a>-->
+                <!--                </button>-->
+                <span>
+                    <a class="btn btn-light" th:href="@{/product/emptycart}"> Empty MyCart </a>
              </span>
 
                 <table class="table .table-bordered">
@@ -27,9 +29,9 @@
                         <th> Product Vendor</th>
                         <th> Price</th>
                         <th> Quantity</th>
-                        <th> Total Price </th>
-                        <th> Delivery Date </th>
-                        <th> Delivery Time </th>
+                        <th> Total Price</th>
+                        <th> Delivery Date</th>
+                        <th> Delivery Time</th>
                     </tr>
                     <tr th:if="${cc.isEmpty()}"> You don't have items in your cart</tr>
                     <tr th:each="c: ${cc}">
@@ -41,29 +43,19 @@
                         <td>$[[${c.totalPrice}]]</td>
                         <td>[[${c.deliveryDate}]]</td>
                         <td>[[${c.deliveryTime}]]</td>
-
-
-<!--                        <td>-->
-<!--                            <a class="btn btn-light css-button js-product-addtocart"-->
-<!--                               th:href="@{/product/cart/{productcode}(productcode=${p.productCode})}">Add to-->
-<!--                                Cart</a>-->
-<!--                        </td>-->
-
-
                         <td> <span>
-                            <a class="btn btn-light"  th:href="@{/product/cart/{productcode}(productcode=${c.productCode})}">More
+                            <a class="btn btn-light"
+                               th:href="@{/product/cart/{productcode}(productcode=${c.productCode})}">More(+)
                                  </a>
-                                    <a class="btn btn-light" th:href="@{/product/cart/{productcode}(productcode=${c.productCode})}">Reduce</a>
-                                    <a class="btn btn-light" th:href="@{/product/detail/{productcode}(productcode=${c.productCode})}">Remove</a>
-<!--                                    <a class="btn btn-light"-->
-<!--                                       th:href="@{/product/detail/{productcode}(productcode=${c.productCode})}">Empty-->
-<!--                                        MyCart</a>-->
+                                    <a class="btn btn-light"
+                                       th:href="@{/product/cart/reduce/{productcode}(productcode=${c.productCode})}">Reduce(-)</a>
+                                    <a class="btn btn-light"
+                                       th:href="@{/product/cart/remove/{productcode}(productcode=${c.productCode})}">Remove</a>
                                 </span>
                         </td>
                     </tr>
 
                 </table>
-<!--                <span th:text="${cc.}"></span>-->
             </div>
         </div>
     </div>

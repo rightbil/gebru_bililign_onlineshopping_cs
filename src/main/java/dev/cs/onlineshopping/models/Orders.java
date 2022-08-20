@@ -3,6 +3,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 @Data
 @NoArgsConstructor
@@ -17,17 +18,17 @@ public class Orders {
     @Setter(AccessLevel.PRIVATE)
     Integer orderNumber; //int(11) NOT NULL,
     @Basic
-    @Temporal(TemporalType.DATE)
+   // @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    Date orderDate;// date NOT NULL,
+    LocalDate orderDate;// date NOT NULL,
     @Basic
-    @Temporal(TemporalType.DATE)
+   // @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    Date requiredDate;// date NOT NULL,
+    LocalDate requiredDate;// date NOT NULL,
     @Basic
-    @Temporal(TemporalType.DATE)
+    //@Temporal(TemporalType.DATE)
     //@Column( columnDefinition = "Date Local")
-    Date shippedDate;// date DEFAULT NULL,
+    LocalDate shipdDate;// date DEFAULT NULL,
     @Column(nullable = false, length = 10)
     String status;// varchar(15) NOT NULL,
     @Column(columnDefinition = "text")
@@ -35,6 +36,6 @@ public class Orders {
     //TODO FK
     @Column(nullable = false, length = 50)
     Integer customerNumber;// int(11) NOT NULL
-    @Transient //TODO this is for testing and can be deleted
-    String DeveloperNames;
+//    @Transient //TODO this is for testing and can be deleted
+//    String DeveloperNames;
 }

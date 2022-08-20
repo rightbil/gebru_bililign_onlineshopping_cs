@@ -4,21 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="Security login and registration are fixed.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6985f3aa-94c0-4862-addf-d66c1f688013.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6985f3aa-94c0-4862-addf-d66c1f688013.xml" afterDir="false" />
+    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="User Information is added to Cookies.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/UserRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/UserRegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/utility/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/utility/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/models/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/os.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/cs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Orgbase.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Orgbase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productcart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Orders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/CustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/utility/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/utility/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/os.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Orgbase.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Orgbase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productcart.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +50,9 @@
         <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="com.haulmont.jpb.JpaRepository" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -210,7 +225,7 @@
       <workItem from="1660665001283" duration="104000" />
       <workItem from="1660671440880" duration="65039000" />
       <workItem from="1660829151442" duration="44129000" />
-      <workItem from="1660914931911" duration="23628000" />
+      <workItem from="1660914931911" duration="45381000" />
     </task>
     <task id="LOCAL-00001" summary="Customer Controller  GetMapping methode created.">
       <created>1660206067554</created>
@@ -345,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660942486831</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="User Information is added to Cookies.">
+      <created>1660954187257</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1660954187257</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +402,8 @@
     <MESSAGE value="ProductLine repo,service, drop down for prodcutline fk added on product form and successfully added to database added these files too." />
     <MESSAGE value="Productline drop down added but needs fix" />
     <MESSAGE value="Security login and registration are fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Security login and registration are fixed." />
+    <MESSAGE value="User Information is added to Cookies." />
+    <option name="LAST_COMMIT_MESSAGE" value="User Information is added to Cookies." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

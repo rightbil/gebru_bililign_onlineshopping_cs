@@ -4,6 +4,8 @@ import dev.cs.onlineshopping.repositories.CustomerRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 @Service
 public class CustomerService {
     private final CustomerRepository customerRepository;
@@ -18,6 +20,10 @@ public class CustomerService {
         return customerRepository
                 .findById(customerId)
                 .orElseThrow(NullPointerException::new);
+    }
+    public Optional<Customer> findCustomerEmail(String email) {
+        Optional<Customer> customer = customerRepository.findCustomerByEmail(email);
+        return customer;
     }
     //TODO late on check the query method
 //    public List<Customer> findCustomerByName(String customerName) {

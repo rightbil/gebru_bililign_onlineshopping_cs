@@ -22,8 +22,6 @@ import javax.persistence.*;
 //generates a constructor with 1 parameter for each field in your class.
 //Fields marked with @NonNull result in null checks on those parameters.
 @Data
-
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity // make it JPA entity
@@ -70,18 +68,5 @@ public class Customer {
     Integer salesRepEmployeeNumber;// int(11)DEFAULT NULL,
     @Column(columnDefinition = "decimal(10,2) default NULL")
     double creditLimit;// decimal(10,2)DEFAULT NULL
-    //    Relationships
-    // with orders -- now
-    // TODO with payments -- hold
-    // TODO employees --- hold on R100
-    //    @ManyToOne(fetch = FetchType.EAGER, optional = true)
-    //    @JoinColumn(name = "employeeNumber",
-    //            nullable = false
-    //            , foreignKey = @ForeignKey(name = "salesRepEmployeeNumber"))
-    //    private Employee employee;
-//Relation with User
-//    @OneToOne(mappedBy = "customer" )
-//    private User user;
-      // long UserId; // Fk from user table
-       String email;// Fk from user table
+    String email;// Fk from user table
 }
