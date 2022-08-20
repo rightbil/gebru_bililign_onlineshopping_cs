@@ -82,5 +82,6 @@ public class Customer {
 //Relation with User
 //    @OneToOne(mappedBy = "customer" )
 //    private User user;
-       long UserId; // Fk from user table
+      // long UserId; // Fk from user table
+       String email;// Fk from user table
 }

@@ -32,7 +32,7 @@ public class UserRegistrationController {
             return "registration";
         }
         userService.save(userDto);
-        // Cookie the = new Cookie("cs","vlaue");
+
         return "redirect:/registration?success";
     }
 }

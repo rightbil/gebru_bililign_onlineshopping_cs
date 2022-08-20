@@ -4,6 +4,8 @@ import dev.cs.onlineshopping.models.Product;
 import dev.cs.onlineshopping.models.ProductLine;
 import dev.cs.onlineshopping.services.ProductLineService;
 import dev.cs.onlineshopping.services.ProductService;
+import dev.cs.onlineshopping.utility.Util;
+import org.apache.tomcat.util.http.parser.Cookie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
@@ -33,6 +35,7 @@ public class ProductController {
     public String showAllProducts(HttpServletRequest request, Model model) {
         int page = 0;
         int size = 8;
+      var username =  Util.getCookieValueByName(request,"userName");
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
             page = Integer.parseInt(request.getParameter("page")) - 1;
         }
@@ -63,7 +66,7 @@ public class ProductController {
     }
     // customers can add products to cart just before they are committed to buy
     @GetMapping("/cart/{productcode}")
-    public void addItemToCart(@PathVariable String productcode, HttpServletResponse response, HttpServletRequest request) throws IOException {
+    public void addItemToCart(@PathVariable String productcode, HttpServletResponse response) throws IOException {
         Product underChange= productService.getProductDetail(productcode);
 
         productService.addItemToCart(productService.getProductDetail(productcode));
