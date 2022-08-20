@@ -28,7 +28,7 @@ public class ProductController {
         this.productService = productService;
     }
     // display all products for the customer - can also see the details or add to cart
-    @GetMapping
+    @GetMapping("/")
     public String showAllProducts(HttpServletRequest request, Model model) {
         int page = 0;
         int size = 8;
@@ -92,7 +92,7 @@ public class ProductController {
         productService.removeItemFromVirtualCart(productcode);
         response.sendRedirect("/product/mycart");
     }
-    // Admins will see products by defaultgfg
+
     @GetMapping("/admin")
     public String productDashboard(HttpServletRequest request, Model model) {
         int page = 0;
@@ -133,18 +133,43 @@ public class ProductController {
         return "productadd";
     }
     @GetMapping("/cart/reduce/{productcode}")
-    public void reduceCartQuantity(@PathVariable String productcode, HttpServletResponse response) throws IOException {
+    public String reduceCartQuantity(@PathVariable String productcode, Model model) throws IOException {
         productService.reduceQuantityFromVirtualCart(productcode);
         productService.increaseStockQuantity(productcode);
-        response.sendRedirect("/product/");
+        List<ProductCartDTO> obj = productService.listAllCartItems();
+        if (obj != null) {
+            model.addAttribute("cc", productService.listAllCartItems());
+        }
+        return "productcart";
     }
+
+
+    @GetMapping("/cart/more/{productcode}")
+    public String moreCartQuantity(@PathVariable String productcode, Model model) throws IOException {
+        Product underChange = productService.getProductByProductCode(productcode);
+        productService.addItemToVirtualCart(productcode);
+        productService.testDisplayCartContent();
+        productService.decreaseStockQuantity(productcode);
+        System.out.println(" Testing quantity at  modifications:" + productService.getQuantityFromVirtualCart(productcode));
+        List<ProductCartDTO> obj = productService.listAllCartItems();
+        if (obj != null) {
+            model.addAttribute("cc", productService.listAllCartItems());
+        }
+        return "productcart";
+    }
+
     @GetMapping("/cart/remove/{productcode}")
-    public void removeProductFromCart(@PathVariable String productcode, HttpServletResponse response) throws IOException {
+    public String removeProductFromCart(@PathVariable String productcode, Model model) throws IOException {
         short returnQuantity = productService.getQuantityFromVirtualCart(productcode);
         productService.increaseStockQuantityBatch(returnQuantity, productcode);
         productService.removeItemFromVirtualCart(productcode);
         System.out.println(" testing quantity at  modifications:" + returnQuantity);
-        response.sendRedirect("/product/");
+        List<ProductCartDTO> obj = productService.listAllCartItems();
+        if (obj != null) {
+            model.addAttribute("cc", productService.listAllCartItems());
+        }
+        return "productcart";
+
     }
 
     // CRUD CRUD CRUD STARTS

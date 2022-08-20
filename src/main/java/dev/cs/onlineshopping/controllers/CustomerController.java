@@ -17,7 +17,7 @@ public class CustomerController {
     }
 
 
-    @GetMapping()
+    @GetMapping
     public String defaultAdminDashboard(HttpServletRequest request, Model model) {
         int page = 0;
         int size = 8;
