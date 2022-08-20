@@ -26,7 +26,7 @@ public class Orders {
     @Column(nullable = false)
     LocalDate requiredDate;// date NOT NULL,
     @Basic
-    //@Temporal(TemporalType.DATE)
+    //I@Temporal(TemporalType.DATE)
     //@Column( columnDefinition = "Date Local")
     LocalDate shipdDate;// date DEFAULT NULL,
     @Column(nullable = false, length = 10)

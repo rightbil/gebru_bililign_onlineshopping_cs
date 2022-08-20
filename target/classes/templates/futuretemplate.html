@@ -10,15 +10,10 @@
   <div class="overlay"></div>
   <div class="container">
     <div class="row slider-text align-items-center" data-scrollax-parent="true">
-
       <div class="col-md-6 col-sm-12 <!--ftco-animate-->">
-        <!--                <span class="subheading">Online Shopping </span>-->
-        <h1 class="mb-4">Customer List</h1>
-        <!--                <p class="mb-4 mb-md-5"> “Order it now , get it now”</p>-->
-
+         <h1 class="mb-4">Customer List</h1>
         <table class="table .table-bordered">
           <tr>
-
             <th>Customer Number</th>
             <th>Business Name</th>
             <th>Contact LastName</th>
@@ -48,7 +43,7 @@
             <td> [[${c.salesRepEmployeeNumber}]]</td>
             <td> [[${c.creditLimit}]]</td>
             <td>                         <span>
-                                <a class="btn btn-primary"
+                                <a class="btn btn-primary" disabled
                                    th:href="@{/detail/{id}(id=${c.customerNumber})}">Details</a>
                                 <a class="btn btn-warning"
                                    th:href="@{/update/{id}(id=${c.customerNumber})}">Update</a>

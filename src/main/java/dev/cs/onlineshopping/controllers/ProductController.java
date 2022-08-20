@@ -92,7 +92,6 @@ public class ProductController {
         productService.removeItemFromVirtualCart(productcode);
         response.sendRedirect("/product/mycart");
     }
-
     @GetMapping("/admin")
     public String productDashboard(HttpServletRequest request, Model model) {
         int page = 0;
@@ -142,8 +141,6 @@ public class ProductController {
         }
         return "productcart";
     }
-
-
     @GetMapping("/cart/more/{productcode}")
     public String moreCartQuantity(@PathVariable String productcode, Model model) throws IOException {
         Product underChange = productService.getProductByProductCode(productcode);
@@ -157,7 +154,6 @@ public class ProductController {
         }
         return "productcart";
     }
-
     @GetMapping("/cart/remove/{productcode}")
     public String removeProductFromCart(@PathVariable String productcode, Model model) throws IOException {
         short returnQuantity = productService.getQuantityFromVirtualCart(productcode);
@@ -229,17 +225,10 @@ public class ProductController {
 //                ,p.getMSRP());
 //        return "redirect:/product/admin";
 //    }
-//    @PostMapping("/order")
-//    public String saveMyOrders() {
-//// use session get the  userid
-//// get customerid using user id
-//// get productcode and quanity form mymap {all productcode , with quantities }
-//// insert productCode to order table
-//// capture the orderId (Pk)
-//// pair orderId with each productcode from mymap and orderID() insert into orderdetails
-//// at the same time update product quantitry
-//// empty mymap
-//        return "redirect:/product/admin";
-//    }
+    @GetMapping("/order")
+    public String saveMyOrders(HttpServletRequest request) {
+        productService.processOrders(request);
+        return "redirect:/product/";
+    }
 
 }

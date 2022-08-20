@@ -1,6 +1,7 @@
 package dev.cs.onlineshopping.services;
 import dev.cs.onlineshopping.dtos.ProductCartDTO;
 import dev.cs.onlineshopping.models.Customer;
+import dev.cs.onlineshopping.models.OrderDetail;
 import dev.cs.onlineshopping.models.Orders;
 import dev.cs.onlineshopping.models.Product;
 import dev.cs.onlineshopping.repositories.CustomerRepository;
@@ -27,7 +28,9 @@ public class ProductService {
     @Autowired
     private CustomerRepository customerRepository;
     @Autowired
-    private OrdersRepository ordersRepository;
+    private OrdersService ordersService;
+
+//    private OrderDetailService orderDetailService;
     public Page<Product> listAllStoreProducts(PageRequest pageRequest) {
 //TODO filter this based on quantity > 0
         List<Product> page = productRepository.findAll(pageRequest).stream()
@@ -49,26 +52,47 @@ public class ProductService {
     // an email. let us know if you can give us a feed back on your purchase experiance.
     // Email
     public void processOrders(HttpServletRequest request) {
-        // 1. get the user email form session
+        // 1. Get email form Cookies
         String email = Util.getCookieValueByName(request, "userName");
-        // 2. join step 1 with customer and get customer number
+        System.out.println("tesing email" + email);
+        // 2. Find CustomerNumber using email
         Optional<Customer> customer = customerRepository.findCustomerByEmail(email);
-        // 3. save customer number to order table
+        System.out.println("testing customer number" + customer.get().getCustomerNumber());
+        System.out.println("testing Customer" + customer);
+//        // 3. Insert Order to Order table - use customer number from step 2
+//
         Orders o = new Orders();
         o.setOrderDate(Util.shippingDate());
         o.setRequiredDate(Util.shippingDate());
-//               o.getShippedDate()
+//        o.getShipdDate(Util.shippingDate());
         o.setStatus("OK"); // refer values
         o.getComments();
-//        o.setCustomerNumber();
-        // 4. get all product code and quantity from virtual cart
-        // 5. for each item in step 5 add to order detail table
-        // 6. generate receipt using customer name , address and email signature about delivery date and time and DTO information Customer
-        // Additional messages : Your Items are sent to 11548 Stewart Ln Apt A2. we also sent you
-        // an email. let us know if you can give us a feed back on your purchase experiance.
-        // Email
-    }
+        o.setCustomerNumber(customer.get().getCustomerNumber());
+//
+        System.out.println("Order " + o);
+        Integer newOrderNumber = ordersService.saveMyOrders(o);
+        System.out.println("testing order saved and its id is " + newOrderNumber);
+        // save order and get the saved id for orderDetails
+        // for each code and quantity  // and fixed ordernumber
+//        for (String pc : virtualCart.keySet()) {
+//            var od = new OrderDetail();
+//            od.setOrderNumber(newOrderNumber);
+//            od.setProductCode(pc);
+//            od.setQuantityOrdered(virtualCart.get(pc));
+//            od.setPriceEach(productRepository.findByProductCode(pc).getBuyPrice());
+//            od.setOrderLineNumber(productRepository.findByProductCode(pc).getProductLine());
+//            //orderDetailService.saveOrderDetail(od);
+//            System.out.println("testing order details : " + od);
+//       }
+//        // 4. get all product code and quantity from virtual cart
+//        // 5. for each item in step 5 add to order detail table
+//        // 6. generate receipt using customer name , address and email signature about delivery date and time and DTO information Customer
+//        // Additional messages : Your Items are sent to 11548 Stewart Ln Apt A2. we also sent you
+//        // an email. let us know if you can give us a feed back on your purchase experiance.
+//        // Email
 
+
+    }
     // CRUD prodcuts
     public void saveProduct(Product product) {
         productRepository.save(product);

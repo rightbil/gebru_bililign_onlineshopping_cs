@@ -26,7 +26,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity // make it JPA entity
 @Table(name = "customer" ) // make table name "customers" in db
-//@Builder // read more on build
+
 @FieldDefaults(level = AccessLevel.PRIVATE) //make all fields access specifier private
 /***
  * the current max customer number is 496 so new once start form 500 , max is 999
