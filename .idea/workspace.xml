@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="Menu update , css reference">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/utility/HQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/utility/HQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/cs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/utility/HQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/utility/HQL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/cs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productlist.html" afterDir="false" />
+    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="product search is added.">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +212,7 @@
       <workItem from="1660976194371" duration="872000" />
       <workItem from="1661004286565" duration="9652000" />
       <workItem from="1661017841526" duration="13738000" />
-      <workItem from="1661035504962" duration="48374000" />
+      <workItem from="1661035504962" duration="48883000" />
     </task>
     <task id="LOCAL-00001" summary="Customer Controller  GetMapping methode created.">
       <created>1660206067554</created>
@@ -439,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661109461889</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="product search is added.">
+      <created>1661121565019</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1661121565019</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +474,8 @@
     <MESSAGE value="Testing classes are added." />
     <MESSAGE value="Fixing base template to pick up by other html pages." />
     <MESSAGE value="Menu update , css reference" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu update , css reference" />
+    <MESSAGE value="product search is added." />
+    <option name="LAST_COMMIT_MESSAGE" value="product search is added." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
