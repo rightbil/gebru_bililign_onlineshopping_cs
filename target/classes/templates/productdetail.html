@@ -18,7 +18,7 @@
         <span th:text="${product.MSRP}"></span>
         <h5> Description: </h5>
         <p th:text="${product.productDescription}"></p>
-        <span> <a class="btn btn-light css-button " th:href="@{/product/}">Back to Product List</a> </span>
+        <span> <a class="btn btn-light css-button " th:href="@{/product/}"><i class="bi bi-backspace"></i></a> </span>
 </div>
 <div th:replace="base :: footer "></div>
 <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>

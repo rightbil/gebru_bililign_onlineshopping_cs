@@ -16,6 +16,7 @@ public class CustomerService {
     public Page<Customer> listAllCustomers(PageRequest pageRequest) {
         return customerRepository.findAll(pageRequest);
     }
+
     public Customer findCustomerById(String customerId) {
         return customerRepository
                 .findById(customerId)
@@ -34,5 +35,9 @@ public class CustomerService {
 //                .orElse("Customer with Id :" + " do not exist in the system");
 //
 //    }
+//    public List<Customer> findCustomersSortedWith(String fieldname){
+//    return customerRepository.findAll(Sort.by(Sort.Direction.ASC,fieldname));
+//    }
+
 
 }

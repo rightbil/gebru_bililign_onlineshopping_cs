@@ -13,6 +13,7 @@
         <h1 class="mb-4">Administrator Dashboard - manage customers, products , office and other business </h1>
         <div th:replace=" base:: admin"></div>
         <table class="table .table-bordered css-odd-rows">
+            <caption class="css-caption">Product List in the system  </caption>
             <tr>
                 <td>Code</td>
                 <th>Name</th>
@@ -37,11 +38,12 @@
                 <!--  //TODO Admin can update , add or delete product or sort -->
                 <td>
                     <a class="btn btn-light css-button"
-                       th:href="@{/product/update/{productcode}(productcode=${p.productCode})}">Update</a>
+                       th:href="@{/product/edit/{productcode}(productcode=${p.productCode})}"><i class="bi bi-pencil-square"></i></a>
                 </td>
                 <td>
-                    <a class="btn btn btn-light css-button"
-                       th:href="@{/product/delete/{productcode}(productcode=${p.productCode})}">Delete</a>
+                    <a class="btn btn-light css-button"
+                       th:href="@{/product/delete/{productcode}(productcode=${p.productCode})}"><i
+                            class="bi bi-trash3"></i></a>
                 </td>
             </tr>
         </table>

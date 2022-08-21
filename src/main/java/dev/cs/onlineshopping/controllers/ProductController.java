@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -120,7 +121,7 @@ public class ProductController {
     // Add
     @GetMapping("/add")
     public String addProduct(Model model) {
-           Set<String> productcodes = new HashSet<>();
+        Set<String> productcodes = new HashSet<>();
         for (ProductLine pl : productLineService.findAllProductLine()) {
             productcodes.add(pl.getProductLine());
 
@@ -156,7 +157,6 @@ public class ProductController {
         short returnQuantity = productService.getQuantityFromVirtualCart(productcode);
         productService.increaseStockQuantityBatch(returnQuantity, productcode);
         productService.removeItemFromVirtualCart(productcode);
-
         List<ProductCartDTO> obj = productService.listAllCartItems();
         if (obj != null) {
             model.addAttribute("cc", productService.listAllCartItems());
@@ -164,8 +164,6 @@ public class ProductController {
         return "productcart";
 
     }
-
-    // CRUD CRUD CRUD STARTS
     @PostMapping("/add")
     public String saveProduct(@ModelAttribute("product") Product product, BindingResult result, Model model) {
         System.out.println("/product/add POST is called" + product.getProductCode());
@@ -184,44 +182,20 @@ public class ProductController {
         productService.saveProduct(product);
         System.out.println("Product was created saved ");
         return "redirect:/product/admin";
-//        return "adminproduct";
+
     }
-    // Delete
-//    @GetMapping("/delete/{productcode}")
-//    public String deleteProduct(@PathVariable String productcode){
-//        System.out.println("Delete is called ");
-//        productService.deleteProduct(productcode);
-//        return "redirect:/product/admin";
-//    }
-    // Update
-//    @GetMapping()
-//    public String updatProduct(@ModelAttribute("product") Product p){
-//        // populate the product in a form
-//        // update it
-//        // send it to the post method
-//
-//
-//    }
-    // CRUD CRUD CRUD ENDS
-    // PlaceOrder PlaceOrder PlaceOrder START
-    //var username =  Util.getCookieValueByName(request,"userName");
-    // get the customer name
-    //
-//    @PostMapping("/update/{productcode}")
-//    public String updateProductPersist(@ModelAttribute("product") Product p){
-//        System.out.println("Update is called");
-//        Product u= productService.findProductByProductCode(p.getProductCode());
-//        productService.updateProduct(
-//                 p.getProductName()
-//                ,p.getProductLine()
-//                ,p.getProductScale()
-//                ,p.getProductVendor()
-//                ,p.getProductDescription()
-//                ,p.getQuantityInStock()
-//                ,p.getBuyPrice()
-//                ,p.getMSRP());
-//        return "redirect:/product/admin";
-//    }
+    @GetMapping("/delete/{productcode}")
+    public String deleteProduct(@PathVariable String productcode) {
+        productService.deleteProduct(productcode);
+        return "redirect:/product/admin";
+    }
+    @GetMapping("/edit/{productcode}")
+    public ModelAndView updatProduct(@PathVariable("productcode") String productcode) {
+        ModelAndView editview = new ModelAndView("productedit");
+        Product product = productService.findProductByProductCode(productcode);
+        editview.addObject("product", product);
+        return editview;
+    }
     @GetMapping("/order")
     public String saveMyOrders(HttpServletRequest request) {
         productService.processMyOrders(request);

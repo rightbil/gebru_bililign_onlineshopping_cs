@@ -15,8 +15,6 @@ public class CustomerController {
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }
-
-
     @GetMapping
     public String defaultAdminDashboard(HttpServletRequest request, Model model) {
         int page = 0;
@@ -31,7 +29,7 @@ public class CustomerController {
         return "admindb";
     }
 
-    @GetMapping("/page")
+      @GetMapping("/page")
     public String findAllCustomersByPage(HttpServletRequest request, @RequestParam("page") int page, Model model) {
         //int page = 0;
         int size = 20;
@@ -44,6 +42,18 @@ public class CustomerController {
         model.addAttribute("customers", customerService.listAllCustomers(PageRequest.of(page, size)));
         return "admindb";
     }
+
+
+
+//    @GetMapping("/fieldname")
+//    public CustomerSorting<List<Customer>> findCustomersSortedWith(@PathVariable String fieldname){
+//        List<Customer> allCustomers =  customerService.findCustomersSortedWith(fieldname);
+//        return new CustomerSorting<>(allCustomers.size(), allCustomers);
+//    }
+
+
+
+
 // localhost:[port]/clearCache
     // autowire cache manager
     // clear all cache using cache manager
