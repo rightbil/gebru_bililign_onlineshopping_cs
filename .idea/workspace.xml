@@ -4,16 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="Testing classes are added.">
+    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="Fixing base template to pick up by other html pages.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/cs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/cs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admindb.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admindb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/Autoparts.avif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/Autoparts.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/ProductShelf.avif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/ProductShelf.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/biligebru.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/biligebru.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/car.avif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/car.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/engine.avif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/engine.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/gage.avif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/gage.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/planefan.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/planefan.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/shoppingCart01.avif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/shoppingCart01.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/silverspringdowntown.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/silverspringdowntown.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/tiredecorator.avif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/tiredecorator.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminproduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productadd.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productadd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productcart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productedit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productedit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/zproductdetailtableformatted.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/zproductdetailtableformatted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/SecurityConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/cs.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/cs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admindb.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admindb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/Autoparts.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/ProductShelf.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/biligebru.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/car.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/engine.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/gage.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/planefan.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/shoppingCart01.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/silverspringdowntown.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/tiredecorator.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminproduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productadd.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productadd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productcart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productedit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productedit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/zproductdetailtableformatted.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/zproductdetailtableformatted.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +252,7 @@
       <workItem from="1660976194371" duration="872000" />
       <workItem from="1661004286565" duration="9652000" />
       <workItem from="1661017841526" duration="13738000" />
-      <workItem from="1661035504962" duration="29606000" />
+      <workItem from="1661035504962" duration="37021000" />
     </task>
     <task id="LOCAL-00001" summary="Customer Controller  GetMapping methode created.">
       <created>1660206067554</created>
@@ -411,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661095562706</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Fixing base template to pick up by other html pages.">
+      <created>1661100365998</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1661100365998</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +491,8 @@
     <MESSAGE value="Cart management along with order and order detail saving methods are added." />
     <MESSAGE value="bootstrap icons are added all backend functionality are working - still needs intensive testing." />
     <MESSAGE value="Testing classes are added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing classes are added." />
+    <MESSAGE value="Fixing base template to pick up by other html pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing base template to pick up by other html pages." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

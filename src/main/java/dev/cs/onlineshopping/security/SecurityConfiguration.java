@@ -32,7 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginPage("/login")
                 .permitAll()
-                .defaultSuccessUrl("/product/") // as landing page
+                .defaultSuccessUrl("/product") // as landing page
                 //.loginPage("/product")
 //                .permitAll()
                 .and()

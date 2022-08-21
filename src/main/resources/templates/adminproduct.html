@@ -11,8 +11,11 @@
         <!--        <div class="row slider-text align-items-center" data-scrollax-parent="true">-->
         <!--            <div class="col-md-6 col-sm-12 &lt;!&ndash;ftco-animate&ndash;&gt;">-->
         <h1 class="mb-4">Administrator Dashboard - manage customers, products , office and other business </h1>
-        <div th:replace=" base:: admin"></div>
-        <table class="table .table-bordered css-odd-rows">
+        <div th:replace=" base:: admin" >
+        </div>
+        <div style="display: inline!important;">  <a th:href="@{/product/add}" class="btn btn-primary p-3 px-xl-4 py-xl-3">Add Product</a></div>
+
+        <table class="table .table-bordered css-odd-rows" style="width: 100%">
             <caption class="css-caption">Product List in the system  </caption>
             <tr>
                 <td>Code</td>
@@ -33,7 +36,7 @@
                 <td>[[${p.quantityInStock}]]</td>
                 <td>[[${p.buyPrice}]]</td>
                 <td>[[${p.MSRP}]]</td>
-                <td class="css-description">[[${p.productDescription}]]</td>
+                <td class="cs-description">[[${p.productDescription}]]</td>
 
                 <!--  //TODO Admin can update , add or delete product or sort -->
                 <td>
@@ -72,7 +75,6 @@
                 </li>
             </ul>
         </nav>
-        <p><a th:href="@{/product/add}" class="btn btn-primary p-3 px-xl-4 py-xl-3">Add Product</a></p>
 
     </div>
 </div>
@@ -83,6 +85,19 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+<style>
+
+    table {
+        table-layout:fixed;
+    }
+    td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+    }
+
+
+</style>
 
 </body>
 
