@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class ProductControllerTest {
+    // controller does't make sense
+    // CRUD
     @BeforeEach
     void setUp() {
     }
