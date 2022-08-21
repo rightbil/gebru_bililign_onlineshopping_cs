@@ -26,7 +26,7 @@ public class OrderDetail implements Serializable {
     Short quantityOrdered ;// int(11) NOT NULL,
     @Column(nullable = false, precision = 10, scale = 2)
     double priceEach;// decimal(10,2) NOT NULL,
-    @Column(nullable = false, length = 6)
+    @Column(nullable = false)
     String orderLineNumber;// smallint(6) NOT NULL
 
 }

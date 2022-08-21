@@ -12,12 +12,12 @@ public class MainController {
     ProductService productService;
     @GetMapping("/")
     public String root() {
-        productService.clearCart();
+        productService.clearVirtualCart();
         return "index";
     }
     @GetMapping("/login")
     public String login(Model model) {
-        productService.clearCart();
+        productService.clearVirtualCart();
         return "login";
     }
     @GetMapping("/user")

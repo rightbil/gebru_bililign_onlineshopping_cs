@@ -1,7 +1,11 @@
 package dev.cs.onlineshopping.models;
+import javax.persistence.GeneratedValue;
+import javax.persistence.SequenceGenerator;
 import java.io.PrintStream;
 import java.io.Serializable;
 import java.util.Objects;
+
+//@SequenceGenerator(name = "orderNumber_Seq", initialValue = 10500, allocationSize = 1)
 public class OrderDetailIdClass implements Serializable {
     private Integer orderNumber;
     private String  productCode;

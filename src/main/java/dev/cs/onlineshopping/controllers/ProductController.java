@@ -67,7 +67,6 @@ public class ProductController {
         productService.addItemToVirtualCart(productcode);
         productService.testDisplayCartContent();
         productService.decreaseStockQuantity(productcode);
-        System.out.println(" Testing quantity at  modifications:" + productService.getQuantityFromVirtualCart(productcode));
         response.sendRedirect("/product/");
     }
     // customers can see what they have in their cart
@@ -83,7 +82,7 @@ public class ProductController {
     // customers can see what they have in their cart
     @GetMapping("/emptycart")
     public void cleanVirtualCart(HttpServletResponse response) throws IOException {
-        productService.clearCart();
+        productService.clearVirtualCart();
         response.sendRedirect("/product/mycart");
     }
     // customers car remove products from cart
@@ -121,8 +120,7 @@ public class ProductController {
     // Add
     @GetMapping("/add")
     public String addProduct(Model model) {
-        System.out.println("/prodcut/add get is called" + productLineService.findAllProductLine().size());
-        Set<String> productcodes = new HashSet<>();
+           Set<String> productcodes = new HashSet<>();
         for (ProductLine pl : productLineService.findAllProductLine()) {
             productcodes.add(pl.getProductLine());
 
@@ -147,7 +145,6 @@ public class ProductController {
         productService.addItemToVirtualCart(productcode);
         productService.testDisplayCartContent();
         productService.decreaseStockQuantity(productcode);
-        System.out.println(" Testing quantity at  modifications:" + productService.getQuantityFromVirtualCart(productcode));
         List<ProductCartDTO> obj = productService.listAllCartItems();
         if (obj != null) {
             model.addAttribute("cc", productService.listAllCartItems());
@@ -159,7 +156,7 @@ public class ProductController {
         short returnQuantity = productService.getQuantityFromVirtualCart(productcode);
         productService.increaseStockQuantityBatch(returnQuantity, productcode);
         productService.removeItemFromVirtualCart(productcode);
-        System.out.println(" testing quantity at  modifications:" + returnQuantity);
+
         List<ProductCartDTO> obj = productService.listAllCartItems();
         if (obj != null) {
             model.addAttribute("cc", productService.listAllCartItems());
@@ -227,7 +224,7 @@ public class ProductController {
 //    }
     @GetMapping("/order")
     public String saveMyOrders(HttpServletRequest request) {
-        productService.processOrders(request);
+        productService.processMyOrders(request);
         return "redirect:/product/";
     }
 
