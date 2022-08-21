@@ -14,6 +14,8 @@ public class CustomerService {
     }
     // CRUD- Select
     public Page<Customer> listAllCustomers(PageRequest pageRequest) {
+
+
         return customerRepository.findAll(pageRequest);
     }
 

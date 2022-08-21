@@ -1,4 +1,5 @@
 package dev.cs.onlineshopping.controllers;
+import dev.cs.onlineshopping.models.Customer;
 import dev.cs.onlineshopping.services.CustomerService;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
@@ -42,7 +44,6 @@ public class CustomerController {
         model.addAttribute("customers", customerService.listAllCustomers(PageRequest.of(page, size)));
         return "admindb";
     }
-
 
 
 //    @GetMapping("/fieldname")

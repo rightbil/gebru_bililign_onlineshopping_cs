@@ -8,13 +8,14 @@ import dev.cs.onlineshopping.repositories.CustomerRepository;
 import dev.cs.onlineshopping.repositories.ProductRepository;
 import dev.cs.onlineshopping.utility.Util;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+import org.springframework.beans.support.PagedListHolder;
+import org.springframework.data.domain.*;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
+import java.util.stream.Collectors;
 @Service
 public class ProductService {
     private final short defaultCartQuantity = (short) 1;
@@ -61,16 +62,14 @@ public class ProductService {
             od.setPriceEach(productRepository.findByProductCode(pc).getBuyPrice());
             od.setOrderLineNumber(productRepository.findByProductCode(pc).getProductLine());
             orderDetailService.saveOrderDetail(od);
-         }
+        }
         clearVirtualCart();
-
 //        System.out.println("Dear Customer " + customer.get().getContactFirstName() + " " + customer.get().getContactLastName() +
 //                "\n Your order is on the way and its reference is " );
 //                + newOrderNumber + Util.requiredDate() +
 //                "\n Product details are:\n " + virtualCart.keySet() +
 //                "\nExpected Delivery date" + ordersService.findOrderByOrderNumber(newOrderNumber) +
 //                "\nYour card on file is charged $ " + totalCharge + "\n Thank you");
-
     }
     // CRUD prodcuts
     public void saveProduct(Product product) {
@@ -185,4 +184,19 @@ public class ProductService {
 //        return sumOfQuantityIncart;
 //    }
     }
+    public Page<Product> searchProductByName(String productname) {
+        Pageable p = PageRequest.of(0, 10);
+        List<Product> finalList=new ArrayList<>();
+        List<Product> list = productRepository.findAll();
+        if(productname!="")
+            finalList = list.stream().filter(pp -> pp.getProductName().contains(productname)).collect(Collectors.toList());
+        else
+            finalList= list;
+        final int start = (int) p.getOffset();
+        final int end = Math.min((start + p.getPageSize()), finalList.size());
+        final Page<Product> page = new PageImpl<>(finalList.subList(start, end), p, finalList.size());
+        return page;
+
+    }
+
 }

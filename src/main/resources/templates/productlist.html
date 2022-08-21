@@ -7,9 +7,27 @@
 </head>
 <body>
 <div th:replace="base :: navlinks"></div>
+
 <div class="container">
-    <h1 class="mb-4">Product List</h1>
-    <table class="table .table-bordered ">
+    <h1 class="mb-4">Products</h1>
+
+    <div class="input-group" style="width: 25%; margin-bottom: 20px">
+         <input id="input" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button id="inputbtn" onclick="searchTerm()" type="button" class="btn btn-outline-primary">
+            <a >search</a></button>
+    </div>
+    <script>
+        function searchTerm(){
+            if(inputVal().length !=0)
+            window.document.location.href= "/product/search/"+ inputVal();
+            else
+                window.document.location.href= "/product"
+        }
+        function inputVal(){
+            return document.getElementById("input").value;
+        }
+    </script>
+     <table class="table .table-bordered ">
         <tr>
             <th>Name</th>
             <th>Code</th>

@@ -31,8 +31,9 @@ public class ProductController {
     // display all products for the customer - can also see the details or add to cart
     @GetMapping()
     public String showAllProducts(HttpServletRequest request, Model model) {
+        // if the quantiyt of the product is < 1 it should be displayed
         int page = 0;
-        int size = 8;
+        int size = 5;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
             page = Integer.parseInt(request.getParameter("page")) - 1;
         }
@@ -119,7 +120,6 @@ public class ProductController {
         return "adminproduct";
     }
     // Add
-
     @GetMapping("/cart/reduce/{productcode}")
     public String reduceCartQuantity(@PathVariable String productcode, Model model) throws IOException {
         productService.reduceQuantityFromVirtualCart(productcode);
@@ -156,7 +156,7 @@ public class ProductController {
     }
     @PostMapping("/add")
     public String saveProduct(@ModelAttribute("product") Product product, BindingResult result, Model model) {
-       // System.out.println("/product/add POST is called" + product.getProductCode());
+        // System.out.println("/product/add POST is called" + product.getProductCode());
         //TODO add productline later on
 //        model.addAttribute("product", product);
 //        if (result.hasErrors()) {
@@ -179,7 +179,6 @@ public class ProductController {
         productService.deleteProduct(productcode);
         return "redirect:/product/admin";
     }
-
     @GetMapping("/add")
     public String addProduct(Model model) {
         Set<String> productcodes = new HashSet<>();
@@ -194,7 +193,6 @@ public class ProductController {
     @GetMapping("/edit/{productcode}")
     public ModelAndView updatProduct(@PathVariable("productcode") String productcode) {
         ModelAndView editview = new ModelAndView("productedit");
-
         Set<String> productcodes = new HashSet<>();
         for (ProductLine pl : productLineService.findAllProductLine()) {
             productcodes.add(pl.getProductLine());
@@ -210,5 +208,12 @@ public class ProductController {
         productService.processMyOrders(request);
         return "redirect:/product/";
     }
+    @GetMapping("/search/{productname}")
+    public String searchProduct(@PathVariable("productname") String productname, Model model) {
+       var x = productService.searchProductByName(productname);
+        System.out.println("yuou are in product search input is : " + productname);
+        model.addAttribute("products", x);
+        return "productlist";
 
+    }
 }

@@ -11,7 +11,8 @@ import javax.persistence.NamedQuery;
 //        @NamedQuery(name = "ShowStudentsAndCourse", query = "FROM Student s inner join s.studentCourses")
 //search products by productcode
         @NamedQuery(name="sqlSearchProductByProductCode" , query= "FROM Product p where p.productCode=:productcode"),
-        @NamedQuery(name ="sqlDeleteProductByProductCode", query="DELETE FROM Product p where p.productCode =:productcode")
+        @NamedQuery(name ="sqlDeleteProductByProductCode", query="DELETE FROM Product p where p.productCode =:productcode"),
+//        @NamedQuery(name="sqlSearchProductByProductName" , query= "FROM Product p where p.productCode=:productcode"),
 })
 public class HQL {
 }
