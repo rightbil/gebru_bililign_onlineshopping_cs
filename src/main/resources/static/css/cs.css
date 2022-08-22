@@ -32,7 +32,6 @@ body{
     color: green!important;
 }
 
-
 .css-footer{
     display: flex;
    align-content: flex-start;
@@ -43,8 +42,6 @@ body{
     flex-direction: row-reverse;
 
 }
-
-
 
 .css-caption{
     color:gray;
@@ -60,17 +57,24 @@ table td:last-child{
     width:100%;
 }
 
+/*.wrapper {*/
+/*    border-color: gainsboro black;*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(2,1fr);*/
+/*    row-gap: 1em;*/
+/*    background-color: red;*/
+/*}*/
 
-/* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width: 992px) {
-    .wrapper ,#navbarSupportedContent{
-        background-color: rgb(129, 129, 166);
-    }
-}
+/*!* On screens that are 992px or less, set the background color to blue *!*/
+/*@media screen and (max-width: 992px) {*/
+/*    .wrapper ,#navbarSupportedContent{*/
+/*        background-color: rgb(129, 129, 166);*/
+/*    }*/
+/*}*/
 
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
-    .wrapper {
-        background-color: rgb(218, 218, 203);
-    }
-}
+/*!* On screens that are 600px or less, set the background color to olive *!*/
+/*@media screen and (max-width: 600px) {*/
+/*    .wrapper {*/
+/*        background-color: rgb(218, 218, 203);*/
+/*    }*/
+/*}*/
