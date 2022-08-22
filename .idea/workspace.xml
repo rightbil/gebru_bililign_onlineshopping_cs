@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="product search is added.">
+    <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="Adding home page grid images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/cs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/cs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/Autoparts.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/ProductShelf.avif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/shelf.avif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/biligebru.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/planefan.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/shoppingCart01.avif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/cart.avif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/silverspringdowntown.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/tiredecorator.avif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/decorator.avif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/car.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/engine.avif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/cs.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/cs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/Autoparts.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/ProductShelf.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/biligebru.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/planefan.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/shoppingCart01.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/silverspringdowntown.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/tiredecorator.avif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
@@ -125,11 +111,11 @@
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/img" />
       <recent name="$PROJECT_DIR$/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/src/main/resources/image" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/Just" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -232,7 +218,7 @@
       <workItem from="1660976194371" duration="872000" />
       <workItem from="1661004286565" duration="9652000" />
       <workItem from="1661017841526" duration="13738000" />
-      <workItem from="1661035504962" duration="65332000" />
+      <workItem from="1661035504962" duration="73705000" />
     </task>
     <task id="LOCAL-00001" summary="Customer Controller  GetMapping methode created.">
       <created>1660206067554</created>
@@ -458,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661121748623</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Adding home page grid images">
+      <created>1661140010682</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1661140010682</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +495,8 @@
     <MESSAGE value="Fixing base template to pick up by other html pages." />
     <MESSAGE value="Menu update , css reference" />
     <MESSAGE value="product search is added." />
-    <option name="LAST_COMMIT_MESSAGE" value="product search is added." />
+    <MESSAGE value="Adding home page grid images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding home page grid images" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
