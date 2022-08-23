@@ -5,13 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="Adding home page grid images">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6985f3aa-94c0-4862-addf-d66c1f688013.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6985f3aa-94c0-4862-addf-d66c1f688013.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/car.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/engine.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/cs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/cs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admindb.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admindb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminproduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productadd.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productadd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productcart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productedit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/cs/onlineshopping/OnlineshoppingApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/cs/onlineshopping/OnlineshoppingApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/cs/onlineshopping/controllers/ProductControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/cs/onlineshopping/repositories/ProductRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/cs/onlineshopping/repositories/ProductRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/cs.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/cs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admindb.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admindb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminproduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productadd.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productadd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productcart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productedit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productedit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dev/cs/onlineshopping/OnlineshoppingApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dev/cs/onlineshopping/OnlineshoppingApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +54,8 @@
         <option value="CSS File" />
         <option value="Interface" />
         <option value="com.haulmont.jpb.JpaRepository" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -74,38 +98,38 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
-    "last_opened_file_path": "/Users/bgebru/Desktop/CS/gebru_bililign_onlineshopping_cs",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
-    "spring.configuration.checksum": "f35bc06dfe2f9ddb3396e450460275e3"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bgebru/Desktop/CS/gebru_bililign_onlineshopping_cs&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;f35bc06dfe2f9ddb3396e450460275e3&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
@@ -121,10 +145,26 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="dev.cs.onlineshopping.repositories" />
       <recent name="dev.cs.onlineshopping.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.OnlineshoppingApplication">
+  <component name="RunManager" selected="JUnit.OnlineshoppingApplicationTests">
+    <configuration name="OnlineshoppingApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="onlineshopping" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.cs.onlineshopping.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.cs.onlineshopping" />
+      <option name="MAIN_CLASS_NAME" value="dev.cs.onlineshopping.OnlineshoppingApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="dev.cs.onlineshopping.controllers in onlineshopping" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="onlineshopping" />
       <extension name="coverage">
@@ -172,6 +212,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OnlineshoppingApplicationTests" />
         <item itemvalue="JavaScript Debug.registration.html" />
         <item itemvalue="JavaScript Debug.test.html" />
         <item itemvalue="Spring Boot.SpringSecurityProjectApplication" />
@@ -219,6 +260,7 @@
       <workItem from="1661004286565" duration="9652000" />
       <workItem from="1661017841526" duration="13738000" />
       <workItem from="1661035504962" duration="73705000" />
+      <workItem from="1661186879070" duration="21962000" />
     </task>
     <task id="LOCAL-00001" summary="Customer Controller  GetMapping methode created.">
       <created>1660206067554</created>

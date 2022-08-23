@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
-
 <head th:replace="base :: baseheader">
     <title>Product List</title>
-    <!--    <link th:href="@{css/cs.css}" rel="stylesheet">-->
 </head>
 <body>
 <div th:replace="base :: navlinks"></div>
@@ -12,8 +10,8 @@
     <h1 class="mb-4">Products</h1>
 
     <div class="input-group" style="width: 25%; margin-bottom: 20px">
-         <input id="input" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-        <button id="inputbtn" onclick="searchTerm()" type="button" class="btn btn-outline-primary">
+         <input id="input"  type="search" class="form-control rounded " placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button id="inputbtn" onclick="searchTerm()" type="button" class="btn btn-outline-primary cs-action-button">
             <a >search</a></button>
     </div>
     <script>
@@ -32,7 +30,7 @@
             <th>Name</th>
             <th>Code</th>
             <th>Quantity</th>
-            <th>Price</th>
+            <th>Price($)</th>
             <th>Finalize your orders</th>
         </tr>
         <tr th:each="p: ${products}">
@@ -41,14 +39,19 @@
             <td>[[${p.quantityInStock}]]</td>
             <td>[[${p.buyPrice}]]</td>
             <td>
-                <a class="btn btn-light"
-                   th:href="@{/product/detail/{productcode}(productcode=${p.productCode})}"><i
-                        class="bi bi-ticket-detailed"></i></a>
+                <a class="btn btn-light cs-action-button"
+                   th:href="@{/product/detail/{productcode}(productcode=${p.productCode})}">
+<!--                    <i class="bi bi-ticket-detailed"></i>-->
+                Detail
+
+                </a>
             </td>
             <td sec:authorize="isAuthenticated()">
-                <a class="btn btn-light"
-                   th:href="@{/product/cart/{productcode}(productcode=${p.productCode})}"><i
-                        class="bi bi-cart3"></i></a>
+                <a class="btn btn-light cs-action-button"
+                   th:href="@{/product/cart/{productcode}(productcode=${p.productCode})}">
+<!--                    <i class="bi bi-cart3"></i>-->
+                Add To Cart
+                </a>
             </td>
 
 

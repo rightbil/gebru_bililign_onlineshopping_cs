@@ -4,14 +4,24 @@
 
 <head th:replace="base :: baseheader">
     <title>Admin dashboard- Customer List </title>
+    <style>
+        footer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            background-color: #efefef;
+            text-align: center;
+            font-family: 'Kaushan Script', cursive;
+        }
+    </style>
 </head>
 <body>
 <div th:replace="base :: navlinks"></div>
     <div class="container">
-         <h1 class="mb-4">Administrator Dashboard - manage your business </h1>
-        <div th:replace=" base:: admin"></div>
         <table class="table .table-bordered ">
-            <caption class="css-caption">Customers in the system  </caption>
+            <caption class="css-caption">All Customers in the system  </caption>
             <tr>
                 <th>Number</th>
                 <th>Business</th>
@@ -81,7 +91,12 @@
     </div>
 <!--</div>-->
 </div>
-<div th:replace="base :: footer "></div>
+<!--<div th:replace="base :: footer "></div>-->
+<footer>
+    <p class="css-footer-items">&copy; 2022 Java Fullstack Training offered by Per Scholas & TekSystems
+        <!--            <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i><i class="bi bi-instagram"></i>-->
+    </p>
+</footer>
 
 <!--bootstrap CDN files -->
 
@@ -92,7 +107,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
 <!--JS file -->
-<script src="../static/js/cs.js"></script>
+<script src="../js/cs.js"></script>
 
 </body>
 </html>

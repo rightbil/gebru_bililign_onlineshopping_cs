@@ -1,22 +1,37 @@
 /*@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");*/
-/* product page  */
-body{
-    /*background-color: #AA4586;*/
-}
-/*All pages show same footer */
 /*nav blue color overriding */
+/** {color: white;}*/
+
+/*.container{*/
+/*    background-color: #E2E2E2;*/
+/*}*/
 .page-item.active .page-link
 {
     background-color: #2F6690!important;
     border-color: #2F6690!important;
 }
 .page-link{
-
     color: #2F6690!important;
 }
 .page-item.active >.page-link {
     color: white!important;
 }
+
+/*.class="cs-action-button"*/
+.cs-action-button{
+ box-sizing: border-box!important;
+    /*background-color: white!important;*/
+     width: 80px!important;
+    height: 40px!important;
+    cursor: pointer!important;
+    /*color:#2F6690;*/
+    color:#212529!important;
+}
+
+a.cs-action-button:hover{
+  background-color: red!important;
+}
+
 .css-footer {
     position: absolute;
     right: 0;
@@ -27,54 +42,74 @@ body{
     text-align: center;
     font-family: 'Kaushan Script', cursive;
 }
-/**/
+/*Menu admin dashboard */
 .navbar-dark .navbar-nav .nav-link {
     color: green!important;
 }
-
-.css-footer{
-    display: flex;
-   align-content: flex-start;
-}
-
-.css-footer-items{
-    display: flex;
-    flex-direction: row-reverse;
-
-}
-
+/*caption for tables */
 .css-caption{
     color:gray;
     caption-side: top;
 }
-table{
-    width:100%;
-}
-table td,th{
-    white-space: nowrap;  /** added **/
-}
-table td:last-child{
-    width:100%;
-}
-
-/*.wrapper {*/
-/*    border-color: gainsboro black;*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(2,1fr);*/
-/*    row-gap: 1em;*/
-/*    background-color: red;*/
+/*table{*/
+/*    width:100%;*/
+/*}*/
+/*table td,th{*/
+/*    white-space: nowrap;  !** added **!*/
+/*}*/
+/*table td:last-child{*/
+/*    width:100%;*/
 /*}*/
 
-/*!* On screens that are 992px or less, set the background color to blue *!*/
-/*@media screen and (max-width: 992px) {*/
-/*    .wrapper ,#navbarSupportedContent{*/
-/*        background-color: rgb(129, 129, 166);*/
-/*    }*/
-/*}*/
+/*home page */
 
-/*!* On screens that are 600px or less, set the background color to olive *!*/
-/*@media screen and (max-width: 600px) {*/
-/*    .wrapper {*/
-/*        background-color: rgb(218, 218, 203);*/
-/*    }*/
+.grid-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+/*.justify-content-center*/
+/*{*/
+/*    justify-content: left!important;*/
 /*}*/
+.grid-container {
+    --gap: 12px;
+    --num-cols: 5;
+    --row-height: 100px;
+    box-sizing: border-box;
+    padding: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: 150px;
+    gap: var(--gap)
+}
+
+
+.grid-container-col-4 {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.grid-container-row-2 {
+    grid-row: span 2;
+}
+
+.grid-container-sidebar {
+    grid-row: span 4;
+    /*background-color: brown;*/
+    border: solid 2px green;
+}
+#grid-container-contact{
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+/*TODO color here*/
+@media screen and (max-width: 1024px) {
+    .grid-container {
+        --num-cols: 2;
+        --row-height: 100px;
+        background-color: rgb(129, 129, 166);
+    }
+}

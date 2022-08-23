@@ -190,6 +190,47 @@ public class ProductController {
         model.addAttribute("productlines", productcodes);
         return "productadd";
     }
+
+//    @GetMapping("/edit/{productcode}")
+//    public ModelAndView updatProduct(@PathVariable("productcode") String productcode, Model model) {
+//        ModelAndView editview = new ModelAndView("productedit");
+//        Set<String> productcodes = new HashSet<>();
+//        for (ProductLine pl : productLineService.findAllProductLine()) {
+//            productcodes.add(pl.getProductLine());
+//
+//        }
+//        editview.addObject("productlines", productcodes);
+//        Product product = productService.findProductByProductCode(productcode);
+//        editview.addObject("product", product);
+//        return editview;
+//    }
+//
+
+
+//    @RequestMapping(value = "/user/edit/{userId}", method= RequestMethod.GET)
+//    public ModelAndView editUser(@PathVariable("userId") Integer userId) throws Exception {
+//        ModelAndView response = new ModelAndView();
+//        response.setViewName("user/register");
+//
+//        User user = userDao.findById(userId);
+//
+//        RegisterFormBean form = new RegisterFormBean();
+//
+//        form.setId(user.getId());
+//        form.setEmail(user.getEmail());
+//        form.setFirstName(user.getFirstName());
+//        form.setLastName(user.getLastName());
+//        form.setPassword(user.getPassword());
+//
+//        response.addObject("form", form);
+//
+//        return response;
+//    }
+//
+
+
+
+
     @GetMapping("/edit/{productcode}")
     public ModelAndView updatProduct(@PathVariable("productcode") String productcode) {
         ModelAndView editview = new ModelAndView("productedit");

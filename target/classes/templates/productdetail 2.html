@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
+<head th:replace="base :: baseheader">
+    <title>Product Details </title>
+<!--        TODO BK color not picking from css -->
+<!--        <link th:href ="@{css/cs.css}" rel="stylesheet">-->
+</head>
+<body>
+<div th:replace="base :: navlinks"></div>
+<div class="container">
+        <h2 class="mb-4">Product Detail</h2>
+        <h5>Name: </h5> <span th:text="${product.productName}"></span>
+        <h5> Product Scale:</h5>
+        <span th:text="${product.productScale}"></span>
+        <h5> Product Vendor:</h5>
+        <span th:text="${product.productVendor}"></span>
+        <h5> MSRP:</h5>
+        <span th:text="${product.MSRP}"></span>
+        <h5> Description: </h5>
+        <p th:text="${product.productDescription}"></p>
+        <span> <a class="btn btn-light css-button " th:href="@{/product/}"><i class="bi bi-backspace"></i></a> </span>
+</div>
+<div th:replace="base :: footer "></div>
+<script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+</body>
+</html>

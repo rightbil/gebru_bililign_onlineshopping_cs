@@ -39,9 +39,7 @@
                 <!--productLine-->
                 <div class="form-group" th:classappend="${#fields.hasErrors('productLine')}?
                     'has-error':''">
-                    <label for="productLine" class="control-label">
-                        Product Line</label>
-                    <!-- <div class="form-group"> -->
+                    <div class="form-group">
 
                         <select class="form-control" id="productLine" th:field="*{productLine}">
                             <option value=""> Choose Product Line</option>
@@ -55,7 +53,7 @@
 
                         </select>
 
-<!--                    </div>-->
+                    </div>
                     <p class="error-message" th:each="error: ${#fields.errors('productLine')}"
                        th:text="${error}">
                         Validation error </p>
