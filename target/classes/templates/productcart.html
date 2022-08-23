@@ -25,7 +25,8 @@
         <button type="submit">
                 <a class="btn btn-light cs-action-button" th:href="@{/product/emptycart}"> Clear </a>
             </button>
-        <div th:unless="${cc.isEmpty()}">
+    <span th:text="${total}"> </span>
+        <div th:unless="${products.isEmpty()}">
             <table class="table .table-bordered">
                 <tr>
                     <th> Product Code</th>
@@ -38,8 +39,8 @@
                     <th> Delivery Time</th>
                     <th> Actions </th>
                 </tr>
-                <tr th:if="${cc.isEmpty()}"> You don't have items in your cart</tr>
-                <tr th:each="c: ${cc}">
+                <tr th:if="${products.isEmpty()}"> You don't have items in your cart</tr>
+                <tr th:each="c: ${products}">
                     <td>[[${c.productCode}]]</td>
                     <td>[[${c.productName}]]</td>
                     <td>[[${c.productVendor}]]</td>

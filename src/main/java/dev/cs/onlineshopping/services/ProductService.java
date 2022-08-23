@@ -1,9 +1,6 @@
 package dev.cs.onlineshopping.services;
-import dev.cs.onlineshopping.dtos.ProductCartDTO;
-import dev.cs.onlineshopping.devmodels.models.Customer;
-import dev.cs.onlineshopping.devmodels.models.OrderDetail;
-import dev.cs.onlineshopping.devmodels.models.Orders;
-import dev.cs.onlineshopping.devmodels.models.Product;
+import dev.cs.onlineshopping.dtos.ProductVirtualCartDTO;
+import dev.cs.onlineshopping.models.*;
 import dev.cs.onlineshopping.repositories.CustomerRepository;
 import dev.cs.onlineshopping.repositories.ProductRepository;
 import dev.cs.onlineshopping.utility.Util;
@@ -29,48 +26,51 @@ public class ProductService {
     private OrdersService ordersService;
     @Autowired
     private OrderDetailService orderDetailService;
+    @Autowired
+    private PaymentService paymentService;
+    /****
+     *
+     * @param pageRequest the current page
+     * @return return all products in the form of page
+     */
     public Page<Product> listAllStoreProducts(PageRequest pageRequest) {
         //TODO filter this based on quantity > 0
-//       Page<Product> pp = productRepository.findAll(pageRequest).stream()
-//                .filter(product -> product.getQuantityInStock() > 0).collect(Collectors.toList());
         return productRepository.findAll(pageRequest);
     }
+    /****
+     *
+     * @param productCode
+     * @return product matching the productCode
+     */
     public Product getProductByProductCode(@Param("productcode") String productCode) {
         return productRepository.findByProductCode(productCode);
     }
+    /***
+     * Process Orders for the Items in my virtualCart
+     *  step 1:  Get email form Cookies
+     *
+     * @param request
+     */
     public void processMyOrders(HttpServletRequest request) {
+
         // 1. Get email form Cookies
-        String email = Util.getCookieValueByName(request, "userName");
+         String email = Util.getCookieValueByName(request, "userName");
         // 2. Find CustomerNumber using email
         Optional<Customer> customer = customerRepository.findCustomerByEmail(email);
-//        // 3. Insert Order to Order table - use customer number from step 2
-        Orders o = new Orders();
-        o.setOrderDate(Util.orderDate());
-        o.setRequiredDate(Util.requiredDate());
-        o.setStatus("OK"); // refer values
-        o.getComments();
-        o.setCustomerNumber(customer.get().getCustomerNumber());
-        Integer newOrderNumber = ordersService.saveMyOrders(o);
-        // save order and get the saved id for orderDetails
-        Double totalCharge = 0.0;
-        for (String pc : virtualCart.keySet()) {
-            var od = new OrderDetail();
-            od.setOrderNumber(newOrderNumber);
-            od.setProductCode(pc);
-            od.setQuantityOrdered(virtualCart.get(pc));
-            od.setPriceEach(productRepository.findByProductCode(pc).getBuyPrice());
-            od.setOrderLineNumber(productRepository.findByProductCode(pc).getProductLine());
-            orderDetailService.saveOrderDetail(od);
-        }
+        // 3. Save the order including the customer number from step 2 and return the order number generated
+        Integer newOrderNumber = ordersService.saveMyOrders(customer.get().getCustomerNumber());
+        // 4. save the order detail for every product in virtual cart including order number generated in step 3
+        orderDetailService.saveOrderDetail(newOrderNumber);
+        // 5.  Save the payment for the order including the customer number and total charges from virtualCart
+        paymentService.savePayment(customer.get().getCustomerNumber());
+        // 6 Clear virtual cart
         clearVirtualCart();
-//        System.out.println("Dear Customer " + customer.get().getContactFirstName() + " " + customer.get().getContactLastName() +
-//                "\n Your order is on the way and its reference is " );
-//                + newOrderNumber + Util.requiredDate() +
-//                "\n Product details are:\n " + virtualCart.keySet() +
-//                "\nExpected Delivery date" + ordersService.findOrderByOrderNumber(newOrderNumber) +
-//                "\nYour card on file is charged $ " + totalCharge + "\n Thank you");
+
     }
-    // CRUD prodcuts
+    /***
+     *
+     * @param product saves a product to the database table
+     */
     public void saveProduct(Product product) {
         productRepository.save(product);
     }
@@ -81,45 +81,39 @@ public class ProductService {
     public Product findProductByProductCode(String productcode) {
         return productRepository.findByProductCode(productcode);
     }
-    //@Modifying
-    //@Query("DELETE FROM Product p where p.productCode =:productcode")
     public void deleteProduct(String productcode) {
         productRepository.delete(findProductByProductCode(productcode));
     }
-    //    public void updateProduct(
-//              String productname
-//            , String productline
-//            , String productscale
-//            , String productvendor
-//            , String productDescription
-//            , double quantityInStock
-//            , double buyPrice
-//            , double MSRP) {
-//        productRepository.updateProductByFields(productname, productline, productscale, productvendor, productDescription, quantityInStock, buyPrice, MSRP);
-//
-//    }
-    // CART METHODS CART METHODSCART METHODSCART METHODSCART METHODSCART METHODSCART METHODSCART METHODSCART METHODSCART METHODSCART METHODSCART METHODSCART METHODS
+    /****
+     *
+     * @param quantityInStock products quantity being removed form cart
+     * @param productcode
+     */
     public void increaseStockQuantityBatch(short quantityInStock, String productcode) {
         productRepository.increaseStockQuantityBatch(quantityInStock, productcode);
     }
     /****
-     * This will update the stock quantity when Items are returned from the cart
+     * This will update the stock quantity (+1) when products quantity reduced in cart
      * @param productcode Key of the virtual cart map
      */
     public void increaseStockQuantity(String productcode) {
         productRepository.increaseStockQuantity(productcode);
     }
     /****
-     * Decrease product stock when Items are moved to virtual cart
+     * This will update the stock quantity (-1) when products quantity added in cart
      * @param productcode
      */
     public void decreaseStockQuantity(String productcode) {
         productRepository.decreaseStockQuantity(productcode);
     }
-    public List<ProductCartDTO> listAllCartItems() {
-        List<ProductCartDTO> listOfCartProducts = new ArrayList<>();
+    /****
+     * This ProductCartDTO cantains info from Product and virtualCart.
+     * @return
+     */
+    public List<ProductVirtualCartDTO> listAllCartItems() {
+        List<ProductVirtualCartDTO> listOfCartProducts = new ArrayList<>();
         for (String key : virtualCart.keySet()) {
-            ProductCartDTO cartItem = new ProductCartDTO();
+            ProductVirtualCartDTO cartItem = new ProductVirtualCartDTO();
             cartItem.setProductCode(productRepository.findByProductCode(key).getProductCode());
             cartItem.setProductName(productRepository.findByProductCode(key).getProductName());
             cartItem.setProductVendor(productRepository.findByProductCode(key).getProductVendor());
@@ -148,16 +142,25 @@ public class ProductService {
         Short orderedQuantity = virtualCart.get(productcode);
         return orderedQuantity;
     }
+    /***
+     *
+     * @param productcode
+     */
     public void reduceQuantityFromVirtualCart(String productcode) {
         short quantity = getQuantityFromVirtualCart(productcode);
         if (quantity > 1) {
+//            reduce cart quantity by 1 if quantity in stock is more than one
             quantity--;
             virtualCart.put(productcode, quantity);
+//            add the returned quantity back to stock
             increaseStockQuantity(productcode);
 
-        } else
+        } else {
+//            remove the item from virtual cart
             removeItemFromVirtualCart(productcode);
-        increaseStockQuantity(productcode);
+//            increaseStockQuantityBatch();
+            increaseStockQuantity(productcode);
+        }
     }
     public void addQuantityInCart(String productcode) {
         Short q = virtualCart.get(productcode);
@@ -166,31 +169,35 @@ public class ProductService {
     public void clearVirtualCart() {
         virtualCart.clear();
     }
-    public void testDisplayCartContent() {
-        for (String key : virtualCart.keySet()) {
-            Product p = findProductByProductCode(key);
-
+    /****
+     *
+     * @return total charges towards the customer for the items checked out
+     */
+    public double totalCharges() {
+        double totalCharge = 0.0;
+        for (String p : virtualCart.keySet()) {
+            totalCharge = virtualCart.get(p) * productRepository.findByProductCode(p).getBuyPrice();
         }
-        // TODO Attempt
-//    public static AtomicReference<Short> totalPrducts() {
-//        AtomicReference<Short> atomicSum = new AtomicReference<>();
-//        mapOfCart.entrySet().forEach(e -> e.setValue(atomicSum.accumulateAndGet(e.getValue(), (x, y) -> x + y)));
-//        return atomicSum;
-//    }
-        //TODO
-//    public static double totalCharges() {
-//        double sumOfQuantityIncart = 9.00;
-//        return sumOfQuantityIncart;
-//    }
+        return totalCharge;
     }
+    /****
+     *
+     * @param productname
+     * @return product(s) in pages matching product names ( case insensitive search)
+     */
     public Page<Product> searchProductByName(String productname) {
-        Pageable p = PageRequest.of(0, 10);
-        List<Product> finalList=new ArrayList<>();
+        String productNameUpper = productname.toUpperCase();
+        Pageable p = PageRequest.of(0, 5);
+        List<Product> finalList = new ArrayList<>();
         List<Product> list = productRepository.findAll();
-        if(productname!="")
-            finalList = list.stream().filter(pp -> pp.getProductName().contains(productname)).collect(Collectors.toList());
+        if (productname != "")
+            finalList = list
+                    .stream()
+                    .filter(pp -> pp.getProductName().toUpperCase()
+                            .contains(productNameUpper))
+                    .collect(Collectors.toList());
         else
-            finalList= list;
+            finalList = list;
         final int start = (int) p.getOffset();
         final int end = Math.min((start + p.getPageSize()), finalList.size());
         final Page<Product> page = new PageImpl<>(finalList.subList(start, end), p, finalList.size());

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
+<head th:replace="base::baseheader">
+    <title>Admin dashboard- Product List</title>
+
+</head>
+<body>
+<style>
+    table {
+        table-layout: fixed;
+    }
+
+    td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table td, th {
+        white-space: nowrap;
+    }
+
+    table td:last-child {
+        width: 100%;
+    }
+
+
+    footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        background-color: #efefef;
+        text-align: center;
+        font-family: 'Kaushan Script', cursive;
+        /*background-color: yellow;*/
+    }
+
+
+</style>
+<div th:replace="base :: navlinks"></div>
+<div class="slider-item">
+    <div class="overlay"></div>
+    <div class="container">
+<!--        <h5>Administrator Dashboard - manage customers, products , office and other business </h5>-->
+    </div>
+    <div style="display: inline!important;"><a th:href="@{/product/add}" class="btn btn-light cs-action-button p-3 px-xl-4 py-xl-3">Add
+        </a></div>
+
+    <table class="table .table-bordered css-odd-rows" style="width: 100%">
+        <caption class="css-caption">All Products in the system</caption>
+        <tr>
+            <td>Code</td>
+            <th>Name</th>
+            <th>Scale</th>
+            <th>Vendor</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>MSRP</th>
+            <th>Description</th>
+            <th>Finalize your orders</th>
+        </tr>
+        <tr th:each="p: ${products}">
+            <td>[[${p.productCode}]]</td>
+            <td>[[${p.productName}]]</td>
+            <td>[[${p.productScale}]]</td>
+            <td>[[${p.productVendor}]]</td>
+            <td>[[${p.quantityInStock}]]</td>
+            <td>[[${p.buyPrice}]]</td>
+            <td>[[${p.MSRP}]]</td>
+            <td class="cs-description">[[${p.productDescription}]]</td>
+
+            <!--  //TODO Admin can update , add or delete product or sort -->
+            <td>
+                <a class="btn btn-light cs-action-button"
+                   th:href="@{/product/edit/{productcode}(productcode=${p.productCode})}">
+                    <!--                        <i class="bi bi-pencil-square"></i>-->
+                    Edit
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-light cs-action-button"
+                   th:href="@{/product/delete/{productcode}(productcode=${p.productCode})}">
+                    <!--                        <i class="bi bi-trash3"></i>-->
+                    Delete
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <!-- products pagination -->
+    <nav aria-label="Pagination" th:if="${products.totalPages gt 0}">
+        <ul class="pagination justify-content-center font-weight-bold">
+            <li class="page-item" th:classappend="${products.number eq 0} ? 'disabled'">
+                <a class="page-link"
+                   th:href="@{/product/admin/?page={id}(id=${products.number lt 2 ? 1 : products.number})}"
+                   aria-label="Previous" title="Previous Page" data-toggle="tooltip">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item" th:classappend="${i eq products.number + 1} ? 'active'"
+                th:each="i : ${#numbers.sequence( 1, products.totalPages, 1)}">
+                <a class="page-link" th:href="@{/product/admin/?page={id}(id=${i})}" th:text="${i}"
+                   th:title="${'Page '+ i}" data-toggle="tooltip"></a>
+            </li>
+            <li class="page-item"
+                th:classappend="${products.number + 1 eq products.totalPages} ? 'disabled'">
+                <a class="page-link" th:href="@{/product/admin/?page={id}(id=${products.number + 2})}"
+                   aria-label="Next" title="Next Page" data-toggle="tooltip">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+</div>
+<!--<div th:replace="base :: footer "></div>-->
+<footer>
+    <p class="css-footer-items">&copy; 2022 Java Fullstack Training offered by Per Scholas & TekSystems
+     </p>
+</footer>
+<script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+
+</body>
+
+</html>

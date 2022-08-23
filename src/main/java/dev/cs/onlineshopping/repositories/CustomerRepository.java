@@ -1,5 +1,5 @@
 package dev.cs.onlineshopping.repositories;
-import dev.cs.onlineshopping.devmodels.models.Customer;
+import dev.cs.onlineshopping.models.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

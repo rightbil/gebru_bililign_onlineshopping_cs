@@ -1,5 +1,5 @@
 package dev.cs.onlineshopping.services;
-import dev.cs.onlineshopping.devmodels.models.Customer;
+import dev.cs.onlineshopping.models.Customer;
 import dev.cs.onlineshopping.repositories.CustomerRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

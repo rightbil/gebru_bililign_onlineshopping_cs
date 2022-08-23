@@ -1,6 +1,7 @@
 package dev.cs.onlineshopping.services;
-import dev.cs.onlineshopping.devmodels.models.Orders;
+import dev.cs.onlineshopping.models.Orders;
 import dev.cs.onlineshopping.repositories.OrdersRepository;
+import dev.cs.onlineshopping.utility.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,14 +11,25 @@ import java.util.Optional;
 public class OrdersService {
     @Autowired
     private OrdersRepository ordersRepository;
-    @Transactional
-    public Integer saveMyOrders(Orders order) {
-        Orders ord = ordersRepository.save(order);
-        Integer orderNumber = ord.getOrderNumber();
-        return orderNumber;
+    /****
+     * save the order for the current customer
+     * @param customerNumber logged in customer nubmer
+     * @return the new order number generated
+     */
+      @Transactional
+    public Integer saveMyOrders(Integer customerNumber) {
+        // use the customer number
+        Orders orderOnProgress = new Orders();
+        orderOnProgress.setOrderDate(Util.orderDate());
+        orderOnProgress.setRequiredDate(Util.requiredDate());
+        orderOnProgress.setStatus("OK");
+        orderOnProgress.getComments();
+        orderOnProgress.setCustomerNumber(customerNumber);
+        Integer newOrderNumber = ordersRepository.save(orderOnProgress).getOrderNumber();
+        return newOrderNumber;
     }
-    public Optional<Orders> findOrderByOrderNumber(Integer ordernumber) {
-        return ordersRepository.findById(ordernumber);
+    public Optional<Orders> findOrderByOrderNumber(Integer orderNumber) {
+        return ordersRepository.findById(orderNumber);
 
     }
 }
