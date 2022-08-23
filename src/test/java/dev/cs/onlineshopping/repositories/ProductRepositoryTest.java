@@ -7,11 +7,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import static org.junit.jupiter.api.Assertions.*;
 @DataJpaTest
 class ProductRepositoryTest {
-//    @Test
-//    void deleteInBatch() {
-//    }
-    @Autowired
+     @Autowired
     private ProductRepository productRepository;
+    Product product = new Product();
     @Test
     void itShouldFindProductByProductCode() {
         Short quantityInstoke = 900;
@@ -27,31 +25,41 @@ class ProductRepositoryTest {
         product.setQuantityInStock(quantityInstoke);
         product.setBuyPrice(1000);
         product.setMSRP(100.00);
-
         productRepository.save(product);
         //when
-
         Product exists = productRepository.findByProductCode(productCode);
         //then
-         assertEquals(product,exists); // equals and hash code are implemented
+        assertEquals(product, exists); // equals and hash code are implemented
 
     }
     @Test
     void itShouldDecreaseStockQuantity() {
         //given
+        short quantityBeforeSold = product.getQuantityInStock();
         //when
+        productRepository.decreaseStockQuantity(product.getProductCode());
+        short expected = product.getQuantityInStock();
         //then
+        assertEquals(expected, quantityBeforeSold + 1);
     }
     @Test
     void itShouldIncreaseStockQuantity() {
         //given
+        short quantityBeforeSold = product.getQuantityInStock();
         //when
+        productRepository.increaseStockQuantity(product.getProductCode());
+        short expected = product.getQuantityInStock();
         //then
+        assertEquals(expected, quantityBeforeSold - 1);
     }
     @Test
     void itShouldIncreaseStockQuantityBatch() {
         //given
+        short quantityBeforeSold = product.getQuantityInStock();
         //when
+        productRepository.increaseStockQuantityBatch(quantityBeforeSold,product.getProductCode());
+        short expected = product.getQuantityInStock();
         //then
+        assertEquals(expected, quantityBeforeSold + quantityBeforeSold);
     }
 }
