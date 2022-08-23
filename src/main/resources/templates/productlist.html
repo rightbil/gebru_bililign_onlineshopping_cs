@@ -31,14 +31,14 @@
             <th>Code</th>
             <th>Quantity</th>
             <th>Price($)</th>
-            <th>Finalize your orders</th>
+            <th>Actions</th>
         </tr>
         <tr th:each="p: ${products}">
             <td>[[${p.productName}]]</td>
             <td>[[${p.productCode}]]</td>
             <td>[[${p.quantityInStock}]]</td>
             <td>[[${p.buyPrice}]]</td>
-            <td>
+            <td style="width: 20px">
                 <a class="btn btn-light cs-action-button"
                    th:href="@{/product/detail/{productcode}(productcode=${p.productCode})}">
 <!--                    <i class="bi bi-ticket-detailed"></i>-->
@@ -50,7 +50,7 @@
                 <a class="btn btn-light cs-action-button"
                    th:href="@{/product/cart/{productcode}(productcode=${p.productCode})}">
 <!--                    <i class="bi bi-cart3"></i>-->
-                Add To Cart
+                    To Cart
                 </a>
             </td>
 

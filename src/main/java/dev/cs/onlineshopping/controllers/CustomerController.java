@@ -1,5 +1,4 @@
 package dev.cs.onlineshopping.controllers;
-import dev.cs.onlineshopping.models.Customer;
 import dev.cs.onlineshopping.services.CustomerService;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
@@ -20,7 +18,7 @@ public class CustomerController {
     @GetMapping
     public String defaultAdminDashboard(HttpServletRequest request, Model model) {
         int page = 0;
-        int size = 8;
+        int size = 5;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
             page = Integer.parseInt(request.getParameter("page")) - 1;
         }
@@ -34,7 +32,7 @@ public class CustomerController {
       @GetMapping("/page")
     public String findAllCustomersByPage(HttpServletRequest request, @RequestParam("page") int page, Model model) {
         //int page = 0;
-        int size = 20;
+        int size = 5;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
             page = Integer.parseInt(request.getParameter("page")) - 1;
         }

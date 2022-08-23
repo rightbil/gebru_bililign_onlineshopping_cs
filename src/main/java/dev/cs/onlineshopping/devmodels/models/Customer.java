@@ -1,4 +1,4 @@
-package dev.cs.onlineshopping.models;
+package dev.cs.onlineshopping.devmodels.models;
 import dev.cs.onlineshopping.security.User;
 import lombok.*;
 import lombok.experimental.FieldDefaults;

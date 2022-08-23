@@ -29,7 +29,7 @@
 }
 
 a.cs-action-button:hover{
-  background-color: red!important;
+  background-color: dimgray!important;
 }
 
 .css-footer {
@@ -51,28 +51,16 @@ a.cs-action-button:hover{
     color:gray;
     caption-side: top;
 }
-/*table{*/
-/*    width:100%;*/
-/*}*/
-/*table td,th{*/
-/*    white-space: nowrap;  !** added **!*/
-/*}*/
-/*table td:last-child{*/
-/*    width:100%;*/
-/*}*/
+
 
 /*home page */
-
 .grid-container > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0.9;
 }
-/*.justify-content-center*/
-/*{*/
-/*    justify-content: left!important;*/
-/*}*/
+
 .grid-container {
     --gap: 12px;
     --num-cols: 5;
@@ -97,8 +85,7 @@ a.cs-action-button:hover{
 
 .grid-container-sidebar {
     grid-row: span 4;
-    /*background-color: brown;*/
-    border: solid 2px green;
+    background-color: whitesmoke;
 }
 #grid-container-contact{
     position: relative;
@@ -110,6 +97,17 @@ a.cs-action-button:hover{
     .grid-container {
         --num-cols: 2;
         --row-height: 100px;
-        background-color: rgb(129, 129, 166);
+        background-color: #efefef;
     }
 }
+
+
+/*table{*/
+/*    width:100%;*/
+/*}*/
+/*table td,th{*/
+/*    white-space: nowrap;  !** added **!*/
+/*}*/
+/*table td:last-child{*/
+/*    width:100%;*/
+/*}*/

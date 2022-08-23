@@ -1,7 +1,4 @@
-package dev.cs.onlineshopping.models;
-import javax.persistence.GeneratedValue;
-import javax.persistence.SequenceGenerator;
-import java.io.PrintStream;
+package dev.cs.onlineshopping.devmodels.models;
 import java.io.Serializable;
 import java.util.Objects;
 

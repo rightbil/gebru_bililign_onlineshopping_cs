@@ -1,7 +1,7 @@
 package dev.cs.onlineshopping.controllers;
 import dev.cs.onlineshopping.dtos.ProductCartDTO;
-import dev.cs.onlineshopping.models.Product;
-import dev.cs.onlineshopping.models.ProductLine;
+import dev.cs.onlineshopping.devmodels.models.Product;
+import dev.cs.onlineshopping.devmodels.models.ProductLine;
 import dev.cs.onlineshopping.services.ProductLineService;
 import dev.cs.onlineshopping.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +31,7 @@ public class ProductController {
     // display all products for the customer - can also see the details or add to cart
     @GetMapping()
     public String showAllProducts(HttpServletRequest request, Model model) {
-        // if the quantiyt of the product is < 1 it should be displayed
-        int page = 0;
+          int page = 0;
         int size = 5;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
             page = Integer.parseInt(request.getParameter("page")) - 1;
@@ -46,7 +45,7 @@ public class ProductController {
     // dispaly products by page number
     @GetMapping("/page")
     public String showAllProductByPage(HttpServletRequest request, @RequestParam("page") int page, Model model) {
-        int size = 10;
+        int size = 5;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
             page = Integer.parseInt(request.getParameter("page")) - 1;
         }
@@ -96,7 +95,7 @@ public class ProductController {
     @GetMapping("/admin")
     public String productDashboard(HttpServletRequest request, Model model) {
         int page = 0;
-        int size = 8;
+        int size = 5;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
             page = Integer.parseInt(request.getParameter("page")) - 1;
         }
@@ -109,7 +108,7 @@ public class ProductController {
     }
     @GetMapping("/admin/page")
     public String productDashboardByPage(HttpServletRequest request, @RequestParam("page") int page, Model model) {
-        int size = 10;
+        int size = 5;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
             page = Integer.parseInt(request.getParameter("page")) - 1;
         }

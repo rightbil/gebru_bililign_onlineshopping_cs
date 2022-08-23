@@ -1,5 +1,5 @@
 package dev.cs.onlineshopping.services;
-import dev.cs.onlineshopping.models.ProductLine;
+import dev.cs.onlineshopping.devmodels.models.ProductLine;
 import dev.cs.onlineshopping.repositories.ProductLineRepository;
 import org.springframework.stereotype.Service;
 

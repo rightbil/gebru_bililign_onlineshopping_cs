@@ -1,4 +1,4 @@
-package dev.cs.onlineshopping.models;
+package dev.cs.onlineshopping.devmodels.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -9,6 +9,7 @@ import java.lang.module.FindException;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "product")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Embeddable()
