@@ -5,31 +5,32 @@
 /*.container{*/
 /*    background-color: #E2E2E2;*/
 /*}*/
-.page-item.active .page-link
-{
-    background-color: #2F6690!important;
-    border-color: #2F6690!important;
+.page-item.active .page-link {
+    background-color: #2F6690 !important;
+    border-color: #2F6690 !important;
 }
-.page-link{
-    color: #2F6690!important;
+
+.page-link {
+    color: #2F6690 !important;
 }
-.page-item.active >.page-link {
-    color: white!important;
+
+.page-item.active > .page-link {
+    color: white !important;
 }
 
 /*.class="cs-action-button"*/
-.cs-action-button{
- box-sizing: border-box!important;
+.cs-action-button {
+    box-sizing: border-box !important;
     /*background-color: white!important;*/
-     width: 80px!important;
-    height: 40px!important;
-    cursor: pointer!important;
+    width: 80px !important;
+    height: 40px !important;
+    cursor: pointer !important;
     /*color:#2F6690;*/
-    color:#212529!important;
+    color: #212529 !important;
 }
 
-a.cs-action-button:hover{
-  background-color: dimgray!important;
+a.cs-action-button:hover {
+    background-color: dimgray !important;
 }
 
 .css-footer {
@@ -42,13 +43,38 @@ a.cs-action-button:hover{
     text-align: center;
     font-family: 'Kaushan Script', cursive;
 }
+
 /*Menu admin dashboard */
 .navbar-dark .navbar-nav .nav-link {
-    color: green!important;
+    /*color: green!important;*/
 }
+
+/*.nav-link{}*/
+
+.css-custom-color {
+    color: black!important;
+
+}
+
+.css-custom-dbcolor {
+    background-color: transparent;
+    color: rgb(255, 255, 255, .55);
+    /*border-color: transparent;*/
+    border: none;
+
+
+}
+
+.css-custom-dbcolor:hover {
+    color: rgb(255, 255, 255, .75);
+    /*background-color: transparent;*/
+    border: none;
+}
+
+
 /*caption for tables */
-.css-caption{
-    color:gray;
+.css-caption {
+    color: gray;
     caption-side: top;
 }
 
@@ -87,11 +113,13 @@ a.cs-action-button:hover{
     grid-row: span 4;
     background-color: whitesmoke;
 }
-#grid-container-contact{
+
+#grid-container-contact {
     position: relative;
     bottom: 0;
     left: 0;
 }
+
 /*TODO color here*/
 @media screen and (max-width: 1024px) {
     .grid-container {
