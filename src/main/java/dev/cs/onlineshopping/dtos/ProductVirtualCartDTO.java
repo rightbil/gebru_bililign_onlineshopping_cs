@@ -20,8 +20,5 @@ public class ProductVirtualCartDTO {
     Short itemsQuantity;
     double totalPrice;
     static int totalQuantity;
-    static double totalCharges=1000.00;
-//    double MSRP;
-//    String Comment;
-//    String ShippingAddress;
+    static double totalCharges = 1000.00;
 }

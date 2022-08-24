@@ -1,11 +1,9 @@
 package dev.cs.onlineshopping.models;
 import java.io.Serializable;
 import java.util.Objects;
-
-//@SequenceGenerator(name = "orderNumber_Seq", initialValue = 10500, allocationSize = 1)
 public class OrderDetailIdClass implements Serializable {
     private Integer orderNumber;
-    private String  productCode;
+    private String productCode;
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -18,6 +16,5 @@ public class OrderDetailIdClass implements Serializable {
         return Objects.hash(orderNumber, productCode);
     }
     public OrderDetailIdClass() {
-
     }
 }

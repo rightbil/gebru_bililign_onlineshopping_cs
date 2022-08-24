@@ -20,10 +20,8 @@ public class ProductLine {
     @Column(columnDefinition = "varchar(4000) default NULL")
     String textDescription;// varchar(4000) DEFAULT NULL,
     //TODO remove the following
-//    @ColumnDefault("This is my default name")
     @Column(columnDefinition = "mediumtext")
     String htmlDescription;// mediumtext,
-//    @Lob
     @Column(columnDefinition = "mediumBLOB")
     String image;// mediumblob,
 

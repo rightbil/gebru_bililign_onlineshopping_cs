@@ -16,9 +16,8 @@ public class OrdersService {
      * @param customerNumber logged in customer nubmer
      * @return the new order number generated
      */
-      @Transactional
+    @Transactional
     public Integer saveMyOrders(Integer customerNumber) {
-        // use the customer number
         Orders orderOnProgress = new Orders();
         orderOnProgress.setOrderDate(Util.orderDate());
         orderOnProgress.setRequiredDate(Util.requiredDate());
@@ -28,8 +27,4 @@ public class OrdersService {
         Integer newOrderNumber = ordersRepository.save(orderOnProgress).getOrderNumber();
         return newOrderNumber;
     }
-    public Optional<Orders> findOrderByOrderNumber(Integer orderNumber) {
-        return ordersRepository.findById(orderNumber);
-
-    }
-}
+ }

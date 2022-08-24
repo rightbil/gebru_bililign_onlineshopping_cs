@@ -19,7 +19,6 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     @Transactional
     @Query("UPDATE Product p set p.quantityInStock= p.quantityInStock + 1 Where p.productCode=:productcode")
     void increaseStockQuantity(@Param("productcode") String productcode);
-
     @Modifying
     @Transactional
     @Query("UPDATE Product p set p.quantityInStock= p.quantityInStock +:quantityInStock Where p.productCode=:productcode")

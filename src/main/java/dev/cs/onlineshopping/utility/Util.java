@@ -6,16 +6,14 @@ import java.time.format.DateTimeFormatter;
 public final class Util {
     public static LocalDate requiredDate() {
         LocalDate deliveryDate = LocalDate.now().plusDays(Util.generateDeliveryLagDate());
-       return deliveryDate;
+        return deliveryDate;
 
     }
-
     public static LocalDate orderDate() {
         LocalDate deliveryDate = LocalDate.now();
         return deliveryDate;
 
     }
-
     public static String shippingTime() {
         LocalDateTime deliveryTime = LocalDateTime.now().plusHours(generateDeliveryLagDate());
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern(" HH:00");

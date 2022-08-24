@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
-<!--<head th:replace="base :: baseheader">-->
-<!--    <title>Product Details </title>-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="6665">
@@ -29,16 +27,16 @@
     <link href="../css/cs.css" rel="stylesheet">
 
     <style>
-footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: #efefef;
-    text-align: center;
-    font-family: 'Kaushan Script', cursive;
-}
+        footer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            background-color: #efefef;
+            text-align: center;
+            font-family: 'Kaushan Script', cursive;
+        }
     </style>
 </head>
 <body>
@@ -54,12 +52,11 @@ footer {
     <span th:text="${product.MSRP}"></span>
     <h5> Description: </h5>
     <p th:text="${product.productDescription}"></p>
-    <span> <a class="btn btn-light cs-action-button" th:href="@{/product/}"></i>
-<!--        <i class="bi bi-backspace"></i>-->
-    Back To Product
-    </a> </span>
+    <a class="btn btn-light cs-action-button" th:href="@{/product/}"></i>
+        <!--        <i class="bi bi-backspace"></i>-->
+        Back To Product
+    </a>
 </div>
-<!--<div th:replace="base :: footer "></div>-->
 <footer>
     <p class="css-footer-items">&copy; 2022 Java Fullstack Training offered by Per Scholas & TekSystems
         <!--            <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i><i class="bi bi-instagram"></i>-->

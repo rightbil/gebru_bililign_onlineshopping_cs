@@ -163,10 +163,6 @@ public class ProductService {
             increaseStockQuantity(productcode);
         }
     }
-    public void addQuantityInCart(String productcode) {
-        Short q = virtualCart.get(productcode);
-        virtualCart.put(productcode, q);
-    }
     public void clearVirtualCart() {
         virtualCart.clear();
     }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
       lang="en">
 <head th:fragment="baseheader">
     <title>Product Form</title>
@@ -16,11 +15,11 @@
 
 <body>
 <div th:replace="base :: navlinks"></div>
-<div class="container" >
-<!--<div class="container">-->
+<div class="container">
+
     <div class="row">
-<!--        <div class="col-md-6 col-md-offset-3">-->
-            <div class="col-md-3">
+
+        <div class="col-md-3">
 
             <h4>Product Form</h4>
             <form th:action="@{/product/add}" th:object="${product}" method="post">
@@ -41,22 +40,16 @@
                 <!--productLine-->
                 <div class="form-group" th:classappend="${#fields.hasErrors('productLine')}?
                     'has-error':''">
-<!--                    <label for="productLine" class="control-label">-->
-<!--                        Product Line</label>-->
 
-                        <select class="form-control" id="productLine" th:field="*{productLine}">
-                            <option value=""> Choose Product Line</option>
-                            <option th:each="t : ${productlines}"
-                                    th:value="${t}"
-                                    th:text="${t}"
-                            >
+                    <select class="form-control" id="productLine" th:field="*{productLine}">
+                        <option value=""> Choose Product Line</option>
+                        <option th:each="t : ${productlines}"
+                                th:value="${t}"
+                                th:text="${t}"
+                        >
+                        </option>
+                    </select>
 
-
-                            </option>
-
-                        </select>
-
-<!--                    </div>-->
                     <p class="error-message" th:each="error: ${#fields.errors('productLine')}"
                        th:text="${error}">
                         Validation error </p>

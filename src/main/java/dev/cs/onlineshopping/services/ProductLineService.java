@@ -10,7 +10,7 @@ public class ProductLineService {
     public ProductLineService(ProductLineRepository productLineRepository) {
         this.productLineRepository = productLineRepository;
     }
-    public List<ProductLine> findAllProductLine(){
+    public List<ProductLine> findAllProductLine() {
         return productLineRepository.findAll();
     }
 }

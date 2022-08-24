@@ -4,102 +4,74 @@
 
 <head th:replace="base :: baseheader">
     <title>Admin dashboard- Customer List </title>
-<!--    <style>-->
-<!--        footer {-->
-<!--            position: absolute;-->
-<!--            right: 0;-->
-<!--            bottom: 0;-->
-<!--            left: 0;-->
-<!--            padding: 1rem;-->
-<!--            background-color: #efefef;-->
-<!--            text-align: center;-->
-<!--            font-family: 'Kaushan Script', cursive;-->
-<!--        }-->
-<!--    </style>-->
-
-
 </head>
 <body>
 <div th:replace="base :: navlinks"></div>
-    <div class="container">
-        <table class="table .table-bordered ">
-            <caption class="css-caption">All Customers in the system  </caption>
-            <tr>
-                <th>Number</th>
-                <th>Business</th>
-                <th>Email</th>
-                <th>LastName</th>
-                <th>FirstName</th>
-                <th>Phone Number</th>
-                <th>Address Line 1</th>
-                <th>Address Line 2</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Postal Code</th>
-                <th>Country</th>
-                <th>Sales Person</th>
-                <th>Credit Limit</th>
-            </tr>
-            <tr .css-odd-rows th:each="c: ${customers}">
-                <td> [[${c.customerNumber}]]</td>
-                <td> [[${c.customerName}]]</td>
-                <td> [[${c.email}]]</td>
-                <td> [[${c.contactLastName}]]</td>
-                <td> [[${c.contactFirstName}]]</td>
-                <td> [[${c.phone}]]</td>
-                <td> [[${c.addressLine1}]]</td>
-                <td> [[${c.addressLine2}]]</td>
-                <td> [[${c.city}]]</td>
-                <td> [[${c.state}]]</td>
-                <td> [[${c.postalCode}]]</td>
-                <td> [[${c.country}]]</td>
-                <td> [[${c.salesRepEmployeeNumber}]]</td>
-                <td> [[${c.creditLimit}]]</td>
-<!--                <td>                         <span>-->
-<!--                              <a class="btn btn-warning" -->
-<!--                                   th:href="@{/update/{id}(id=${c.customerNumber})}">Update</a>-->
-<!--                                <a class="btn btn-danger"-->
-<!--                                   th:href="@{/delete/{id}(id=${c.customerNumber})}">Delete</a>-->
-<!--                                           </span>-->
-<!--                </td>-->
-            </tr>
-        </table>
-        <nav aria-label="Pagination" th:if="${customers.totalPages gt 0}">
-            <ul class="pagination justify-content-center font-weight-bold">
-                <li class="page-item" th:classappend="${customers.number eq 0} ? 'disabled'">
-                    <a class="page-link"
-                       th:href="@{/customer/?page={id}(id=${customers.number lt 2 ? 1 : customers.number})}"
-                       aria-label="Previous" title="Previous Page" data-toggle="tooltip">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item" th:classappend="${i eq customers.number + 1} ? 'active'"
-                    th:each="i : ${#numbers.sequence( 1, customers.totalPages, 1)}">
-                    <a class="page-link" th:href="@{/customer/?page={id}(id=${i})}" th:text="${i}"
-                       th:title="${'Page '+ i}" data-toggle="tooltip"></a>
-                </li>
-                <li class="page-item"
-                    th:classappend="${customers.number + 1 eq customers.totalPages} ? 'disabled'">
-                    <a class="page-link"
-                       th:href="@{/customer/?page={id}(id=${customers.number + 2})}"
-                       aria-label="Next" title="Next Page" data-toggle="tooltip">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-<!--        <p><a href="customer/add" class="btn btn-primary p-3 px-xl-4 py-xl-3">Add Customer</a></p>-->
-    </div>
-<!--</div>-->
+<div class="container">
+    <table class="table .table-bordered ">
+        <caption class="css-caption">All Customers in the system</caption>
+        <tr>
+            <th>Number</th>
+            <th>Business</th>
+            <th>Email</th>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>Phone Number</th>
+            <th>Address Line 1</th>
+            <th>Address Line 2</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Postal Code</th>
+            <th>Country</th>
+            <th>Sales Person</th>
+            <th>Credit Limit</th>
+        </tr>
+        <tr .css-odd-rows th:each="c: ${customers}">
+            <td> [[${c.customerNumber}]]</td>
+            <td> [[${c.customerName}]]</td>
+            <td> [[${c.email}]]</td>
+            <td> [[${c.contactLastName}]]</td>
+            <td> [[${c.contactFirstName}]]</td>
+            <td> [[${c.phone}]]</td>
+            <td> [[${c.addressLine1}]]</td>
+            <td> [[${c.addressLine2}]]</td>
+            <td> [[${c.city}]]</td>
+            <td> [[${c.state}]]</td>
+            <td> [[${c.postalCode}]]</td>
+            <td> [[${c.country}]]</td>
+            <td> [[${c.salesRepEmployeeNumber}]]</td>
+            <td> [[${c.creditLimit}]]</td>
+        </tr>
+    </table>
+    <nav aria-label="Pagination" th:if="${customers.totalPages gt 0}">
+        <ul class="pagination justify-content-center font-weight-bold">
+            <li class="page-item" th:classappend="${customers.number eq 0} ? 'disabled'">
+                <a class="page-link"
+                   th:href="@{/customer/?page={id}(id=${customers.number lt 2 ? 1 : customers.number})}"
+                   aria-label="Previous" title="Previous Page" data-toggle="tooltip">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item" th:classappend="${i eq customers.number + 1} ? 'active'"
+                th:each="i : ${#numbers.sequence( 1, customers.totalPages, 1)}">
+                <a class="page-link" th:href="@{/customer/?page={id}(id=${i})}" th:text="${i}"
+                   th:title="${'Page '+ i}" data-toggle="tooltip"></a>
+            </li>
+            <li class="page-item"
+                th:classappend="${customers.number + 1 eq customers.totalPages} ? 'disabled'">
+                <a class="page-link"
+                   th:href="@{/customer/?page={id}(id=${customers.number + 2})}"
+                   aria-label="Next" title="Next Page" data-toggle="tooltip">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
 </div>
 <div th:replace="base :: footer "></div>
-<!--<footer>-->
-<!--    <p class="css-footer-items">&copy; 2022 Java Fullstack Training offered by Per Scholas & TekSystems-->
-<!--        &lt;!&ndash;            <i class="bi bi-facebook"></i><i class="bi bi-twitter"></i><i class="bi bi-instagram"></i>&ndash;&gt;-->
-<!--    </p>-->
-<!--</footer>-->
-
-<!--bootstrap CDN files -->
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

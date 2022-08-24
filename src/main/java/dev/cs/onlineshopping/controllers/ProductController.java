@@ -178,14 +178,6 @@ public class ProductController {
     @PostMapping("/add")
     public String saveProduct(@ModelAttribute("product") Product product, BindingResult result, Model model) {
         //TODO exception handling if product already exists
-//        if (result.hasErrors()) {
-//            return "productadd";
-//        }
-//        Product p = productService.findProductByProductCode(product.getProductCode());
-//        if (p != null) {
-//            result.rejectValue("prodcutCode", "A product  exists with this code");
-//            return "redirect:/product/admin";
-//        } else
         productService.saveProduct(product);
         return "redirect:/product/admin";
     }
@@ -207,11 +199,11 @@ public class ProductController {
     }
     @GetMapping("/edit/{productcode}")
     public ModelAndView updatProduct(@PathVariable("productcode") String productcode) {
-        ModelAndView editview = new ModelAndView("productedit");
+        ModelAndView editview = new ModelAndView("productadd");
         Set<String> productcodes = new HashSet<>();
         for (ProductLine pl : productLineService.findAllProductLine()) {
             productcodes.add(pl.getProductLine());
-
+          //  S10_4757
         }
         editview.addObject("productlines", productcodes);
         Product product = productService.findProductByProductCode(productcode);

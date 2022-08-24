@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
       lang="en">
 <head th:fragment="baseheader">
-    <title>Product Registration</title>
+    <title>Product Form</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
@@ -17,9 +16,12 @@
 <body>
 <div th:replace="base :: navlinks"></div>
 <div class="container">
+
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <h1>Product Form</h1>
+
+        <div class="col-md-3">
+
+            <h4>Product Form</h4>
             <form th:action="@{/product/add}" th:object="${product}" method="post">
 
                 <p class="error-message" th:if="${#fields.hasGlobalErrors()}"
@@ -31,31 +33,23 @@
                     <label for="productCode" class="control-label">
                         Product Code</label>
                     <input id="productCode" class="form-control" th:field="*{productCode}"/>
-                    <p class="error-message" th:each="error: ${#fields.errors('productName')}" th:text="${error}">
-                        Validation error </p>
+                    <span class="error-message" th:each="error: ${#fields.errors('productName')}" th:text="${error}">
+                        Validation error </span>
                 </div>
-
 
                 <!--productLine-->
                 <div class="form-group" th:classappend="${#fields.hasErrors('productLine')}?
                     'has-error':''">
-                    <label for="productLine" class="control-label">
-                        Product Line</label>
-                    <!-- <div class="form-group"> -->
 
-                        <select class="form-control" id="productLine" th:field="*{productLine}">
-                            <option value=""> Choose Product Line</option>
-                            <option th:each="t : ${productlines}"
-                                    th:value="${t}"
-                                    th:text="${t}"
-                            >
+                    <select class="form-control" id="productLine" th:field="*{productLine}">
+                        <option value=""> Choose Product Line</option>
+                        <option th:each="t : ${productlines}"
+                                th:value="${t}"
+                                th:text="${t}"
+                        >
+                        </option>
+                    </select>
 
-
-                            </option>
-
-                        </select>
-
-<!--                    </div>-->
                     <p class="error-message" th:each="error: ${#fields.errors('productLine')}"
                        th:text="${error}">
                         Validation error </p>

@@ -38,7 +38,6 @@
         background-color: #efefef;
         text-align: center;
         font-family: 'Kaushan Script', cursive;
-        /*background-color: yellow;*/
     }
 
 
@@ -47,10 +46,10 @@
 <div class="slider-item">
     <div class="overlay"></div>
     <div class="container">
-<!--        <h5>Administrator Dashboard - manage customers, products , office and other business </h5>-->
     </div>
-    <div style="display: inline!important;"><a th:href="@{/product/add}" class="btn btn-light cs-action-button p-3 px-xl-4 py-xl-3">Add
-        </a></div>
+    <div style="display: inline!important;"><a th:href="@{/product/add}"
+                                               class="btn btn-light cs-action-button p-3 px-xl-4 py-xl-3">Add
+    </a></div>
 
     <table class="table .table-bordered css-odd-rows" style="width: 100%">
         <caption class="css-caption">All Products in the system</caption>
@@ -120,14 +119,11 @@
 
 </div>
 </div>
-<!--<div th:replace="base :: footer "></div>-->
 <footer>
     <p class="css-footer-items">&copy; 2022 Java Fullstack Training offered by Per Scholas & TekSystems
-     </p>
+    </p>
 </footer>
 <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
 <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
-
 </body>
-
 </html>

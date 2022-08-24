@@ -4,13 +4,12 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity // make it JPA entity
-@Table(name = "orders") // make table name "customers" in db
-@FieldDefaults(level = AccessLevel.PRIVATE) //make all fields access specifier private
+@Entity
+@Table(name = "orders")
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @SequenceGenerator(name = "orderNumber_Seq", initialValue = 10500, allocationSize = 1)
 public class Orders {
     @Id
@@ -18,16 +17,12 @@ public class Orders {
     @Setter(AccessLevel.PRIVATE)
     Integer orderNumber; //int(11) NOT NULL,
     @Basic
-   // @Temporal(TemporalType.DATE)
     @Column(nullable = false)
     LocalDate orderDate;// date NOT NULL,
     @Basic
-   // @Temporal(TemporalType.DATE)
     @Column(nullable = false)
     LocalDate requiredDate;// date NOT NULL,
     @Basic
-    //I@Temporal(TemporalType.DATE)
-    //@Column( columnDefinition = "Date Local")
     LocalDate shipdDate;// date DEFAULT NULL,
     @Column(nullable = false, length = 10)
     String status;// varchar(15) NOT NULL,
@@ -36,6 +31,5 @@ public class Orders {
     //TODO FK
     @Column(nullable = false, length = 50)
     Integer customerNumber;// int(11) NOT NULL
-//    @Transient //TODO this is for testing and can be deleted
-//    String DeveloperNames;
+
 }

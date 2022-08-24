@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="base :: baseheader">
-<!--    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>-->
     <title>Login</title>
 </head>
 <body>
 <div th:replace="base :: navlinks"></div>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-3">
             <h1>Login page</h1>
             <form th:action="@{/login}" method="post">
                 <div th:if="${param.error}">
@@ -36,7 +35,7 @@
                         <div class="col-sm-6 col-sm-offset-3">
                             <input type="submit" name="login-submit" id="login-submit"
 
-                            class="btn btn-light cs-action-button" value="Log In"/>
+                                   class="btn btn-light cs-action-button" value="Log In"/>
                             <!--                                   class="form-control btn btn-light cs-action-button" value="Log In"/>-->
                         </div>
                     </div>

@@ -1,32 +1,13 @@
 package dev.cs.onlineshopping.models;
-import dev.cs.onlineshopping.security.User;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
-//@Getter
-//@Setter
-//@ToString
-//@ToString.Exclude for specific fields to be excluded in the output
-//@EqualsAndHashCode
-//@RequiredArgsConstructor
-// All non-initialized final fields get a parameter,
-// as well as any fields that are marked as @NonNull that
-// aren’t initialized where they are declared.
-//@Data // a shortcut for all of the above 5 Annotations
-//@NoArgsConstructor(access = AccessLevel.PRIVATE)
-//@NoArgsConstructor
-// generate constructor with out args
-//@Accessors(fluent = true) // read on this
-//@AllArgsConstructor
-//generates a constructor with 1 parameter for each field in your class.
-//Fields marked with @NonNull result in null checks on those parameters.
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity // make it JPA entity
-@Table(name = "customer" ) // make table name "customers" in db
-
+@Table(name = "customer") // make table name "customers" in db
 @FieldDefaults(level = AccessLevel.PRIVATE) //make all fields access specifier private
 /***
  * the current max customer number is 496 so new once start form 500 , max is 999

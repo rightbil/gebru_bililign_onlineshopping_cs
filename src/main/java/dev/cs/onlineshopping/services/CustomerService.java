@@ -12,13 +12,9 @@ public class CustomerService {
     public CustomerService(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
-    // CRUD- Select
     public Page<Customer> listAllCustomers(PageRequest pageRequest) {
-
-
         return customerRepository.findAll(pageRequest);
     }
-
     public Customer findCustomerById(String customerId) {
         return customerRepository
                 .findById(customerId)
@@ -28,18 +24,5 @@ public class CustomerService {
         Optional<Customer> customer = customerRepository.findCustomerByEmail(email);
         return customer;
     }
-    //TODO late on check the query method
-//    public List<Customer> findCustomerByName(String customerName) {
-//        return customerRepository
-//                .findCustomerByName(customerName)
-//                .map(Customer::getCustomerNumber)
-//
-//                .orElse("Customer with Id :" + " do not exist in the system");
-//
-//    }
-//    public List<Customer> findCustomersSortedWith(String fieldname){
-//    return customerRepository.findAll(Sort.by(Sort.Direction.ASC,fieldname));
-//    }
-
 
 }

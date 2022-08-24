@@ -17,13 +17,11 @@ import java.io.Serializable;
 @SequenceGenerator(name = "orderNumber_Seq", initialValue = 10500, allocationSize = 1)
 public class OrderDetail implements Serializable {
     @Id
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orderNumber_Seq")
     Integer orderNumber;//  int(11) NOT NULL, FK from Orders
     @Id
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orderNumber_Seq")
     String productCode; // varchar(15) NOT NULL, FK from Product
     @Column(nullable = false)
-    Short quantityOrdered ;// int(11) NOT NULL,
+    Short quantityOrdered;// int(11) NOT NULL,
     @Column(nullable = false, precision = 10, scale = 2)
     double priceEach;// decimal(10,2) NOT NULL,
     @Column(nullable = false)

@@ -8,8 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, String> {
-    // TODO implement laster on  Customers could have same name
-
-     @Query("From Customer c where c.email=:email")
-     Optional<Customer> findCustomerByEmail(@Param("email") String email);
+    @Query("From Customer c where c.email=:email")
+    Optional<Customer> findCustomerByEmail(@Param("email") String email);
 }

@@ -16,8 +16,7 @@
         </button>
     </a>
 
-
-    Your total is <b>$ <span th:text="${total}"></span></b>  and you will be charged <b>6%</b> tax only at check out.
+    Your total is <b>$ <span th:text="${total}"></span></b> and you will be charged <b>6%</b> tax only at check out.
     <div th:unless="${products.isEmpty()}">
         <table class="table .table-bordered">
             <tr>
@@ -70,7 +69,6 @@
         </table>
     </div>
 </div>
-<!--<div th:replace="base::footer"></div>-->
 <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
 <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
 <script src="../js/cs.js"></script>

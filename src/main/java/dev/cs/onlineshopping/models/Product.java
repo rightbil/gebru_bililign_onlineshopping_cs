@@ -13,17 +13,11 @@ import java.lang.module.FindException;
 @Table(name = "product")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Embeddable()
-//@NamedQueries({
-//@NamedQuery(name = "sqlSearchProductByProductCode", query = "FROM Product p where p.productCode=:productcode")
-//})
-public class Product{
+public class Product {
     @Id
-//    @Setter(AccessLevel.PRIVATE)
     String productCode;// varchar(15) NOT NULL, composite key
     @Column(nullable = false, length = 70)
     String productName;// varchar(70) NOT NULL,
-//    @Id
-//    @Setter(AccessLevel.PRIVATE)
     String productLine;// varchar(50) NOT NULL, Foreign key
     @Column(nullable = false, length = 50)
     String productScale;// varchar(10) NOT NULL,
@@ -37,11 +31,5 @@ public class Product{
     double buyPrice;// decimal(10,2) NOT NULL,
     @Column(nullable = false, precision = 10, scale = 2)
     double MSRP;// decimal(10,2) NOT NULL
-
-//    Relationships
-//    @JsonIgnore
-//    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    @JoinColumn(name = "productLine")
-//    private ProductLine productLine;
 
 }
