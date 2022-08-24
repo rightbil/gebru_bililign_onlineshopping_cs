@@ -24,7 +24,6 @@ import java.util.Set;
  */
 @RequestMapping("/product")
 public class ProductController {
-
     @Autowired
     private ProductLineService productLineService;
     @Autowired
@@ -37,7 +36,6 @@ public class ProductController {
      */
     @GetMapping()
     public String showAllProducts(HttpServletRequest request, Model model) {
-
         int page = 0;
         int size = 5;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
@@ -52,7 +50,6 @@ public class ProductController {
     /****
      *    dispaly products by page number
      */
-
     @GetMapping("/page")
     public String showAllProductByPage(HttpServletRequest request, @RequestParam("page") int page, Model model) {
         int size = 5;
@@ -78,7 +75,7 @@ public class ProductController {
         return "productdetail";
     }
     /****
-      *add user selected items to shopping cart
+     *add user selected items to shopping cart
      * @param productcode
      * @param response
      * @throws IOException
@@ -101,7 +98,7 @@ public class ProductController {
         if (obj != null) {
             model.addAttribute("products", productService.listAllCartItems());
         }
-        model.addAttribute("total",productService.totalCharges());
+        model.addAttribute("total", productService.totalCharges());
         return "productcart";
 
     }
@@ -151,7 +148,7 @@ public class ProductController {
         if (obj != null) {
             model.addAttribute("products", productService.listAllCartItems());
         }
-        model.addAttribute("total",productService.totalCharges());
+        model.addAttribute("total", productService.totalCharges());
         return "productcart";
     }
     @GetMapping("/cart/more/{productcode}")
@@ -163,7 +160,7 @@ public class ProductController {
         if (obj != null) {
             model.addAttribute("products", productService.listAllCartItems());
         }
-        model.addAttribute("total",productService.totalCharges());
+        model.addAttribute("total", productService.totalCharges());
         return "productcart";
     }
     @GetMapping("/cart/remove/{productcode}")
@@ -175,14 +172,12 @@ public class ProductController {
         if (obj != null) {
             model.addAttribute("products", productService.listAllCartItems());
         }
-        model.addAttribute("total",productService.totalCharges());
+        model.addAttribute("total", productService.totalCharges());
         return "productcart";
-
     }
     @PostMapping("/add")
     public String saveProduct(@ModelAttribute("product") Product product, BindingResult result, Model model) {
         //TODO exception handling if product already exists
-
 //        if (result.hasErrors()) {
 //            return "productadd";
 //        }
@@ -191,7 +186,7 @@ public class ProductController {
 //            result.rejectValue("prodcutCode", "A product  exists with this code");
 //            return "redirect:/product/admin";
 //        } else
-            productService.saveProduct(product);
+        productService.saveProduct(product);
         return "redirect:/product/admin";
     }
     @GetMapping("/delete/{productcode}")

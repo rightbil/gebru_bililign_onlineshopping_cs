@@ -10,6 +10,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.*;
 import java.util.stream.Collectors;
 @Service
@@ -52,9 +54,8 @@ public class ProductService {
      * @param request
      */
     public void processMyOrders(HttpServletRequest request) {
-
         // 1. Get email form Cookies
-         String email = Util.getCookieValueByName(request, "userName");
+        String email = Util.getCookieValueByName(request, "userName");
         // 2. Find CustomerNumber using email
         Optional<Customer> customer = customerRepository.findCustomerByEmail(email);
         // 3. Save the order including the customer number from step 2 and return the order number generated
@@ -176,9 +177,13 @@ public class ProductService {
     public double totalCharges() {
         double totalCharge = 0.0;
         for (String p : virtualCart.keySet()) {
-            totalCharge = virtualCart.get(p) * productRepository.findByProductCode(p).getBuyPrice();
+            totalCharge = totalCharge + virtualCart.get(p) * productRepository.findByProductCode(p).getBuyPrice();
+
         }
-        return totalCharge;
+        Double truncatedDouble = BigDecimal.valueOf(totalCharge)
+                .setScale(3, RoundingMode.HALF_UP)
+                .doubleValue();
+        return truncatedDouble;
     }
     /****
      *

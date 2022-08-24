@@ -7,8 +7,8 @@
 <div th:replace="base :: navlinks"></div>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-
+<!--        <div class="col-md-6 col-md-offset-3">-->
+            <div class="col-md-3">
             <div th:if="${param.success}">
                 <div class="alert alert-info">You've successfully
                     registered
@@ -100,9 +100,9 @@
                             'has-error':''">
                     <input id="terms" type="checkbox"
                            th:field="*{terms}" /> <label
-                        class="control-label" for="terms"> I agree with
+                        class="control-label" for="terms"> I agree
                     the <a
-                            href="#">terms and conditions</a> for
+                            href="#">terms</a> for
                     Registration.
                 </label>
                     <p class="error-message"
@@ -112,7 +112,7 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-light cs-action-button">Register</button>
-                    <span>Already registered? <a href="/"
+                    <span>registered? <a href="/"
                                                  th:href="@{/login}">Login
                                     here</a></span>
                 </div>
