@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head th:replace="base :: baseheader">
 </head>
 <body>
 <div th:replace="base :: navlinks"></div>
 <div class="container">
-    <h1 class="mb-4">Product(s) In Cart</h1>
-    <a th:href="@{/product/order}">
-        <button type="submit" class="btn btn-light cs-action-button" style="margin-left: 100px ">Finish</button>
-    </a>
-    <a th:href="@{/product/emptycart}">
-        <button type="submit" class="btn btn-light cs-action-button" style="margin-left: 30px; margin-right: 10px;">
-            Clear
-        </button>
-    </a>
 
-    Your total is <b>$ <span th:text="${total}"></span></b> and you will be charged <b>6%</b> tax only at check out.
+    <h4>Product(s) In Cart</h4>
+
     <div th:unless="${products.isEmpty()}">
+        Your total is <b>$ <span th:text="${total}"></span></b> and you will be charged <b>6%</b> tax at check out.
+
+        <a th:href="@{/product/order}">
+            <button type="submit" class="btn btn-light cs-action-button" style="margin-left: 100px ">Order</button>
+        </a>
+        <a th:href="@{/product/emptycart}">
+            <button type="submit" class="btn btn-light cs-action-button" style="margin-left: 30px; margin-right: 10px;">
+                Clear
+            </button>
+        </a>
+        <hr class="css-horizontal-line">
         <table class="table .table-bordered">
             <tr>
                 <th> Code</th>

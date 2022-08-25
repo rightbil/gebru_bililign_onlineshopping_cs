@@ -1,23 +1,46 @@
 package dev.cs.onlineshopping.repositories;
 import dev.cs.onlineshopping.models.Product;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.annotation.Rollback;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 @DataJpaTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+/****
+ * Will force the test to use the db mentioned in the properties file.
+ */
+@AutoConfigureTestDatabase(replace = Replace.NONE)
 class ProductRepositoryTest {
     Product product = new Product();
-     @Autowired
+    @Autowired
     private ProductRepository productRepository;
-    @Test
-    void itShouldFindProductByProductCode() {
-        Short quantityInstoke = 900;
-        String productCode = "T2020";
-        //given
+    @BeforeAll
+    static void setUpBeforeClass() throws Exception {
+    }
+    @AfterAll
+    static void tearDownAfterClass() throws Exception {
+        // Delete the product from the database
 
+    }
+    @BeforeEach
+    void setUp() {
+    }
+    @AfterEach
+    void tearDown() {
+    }
+    @Test
+    @Rollback(value = false)
+    /****
+     * This method tests Save / Edit and Finding product by productcode
+     */
+    void itShouldFindProductByProductCode() {
+        Short quantityInstoke = 1900;
+        String productCode = "IK2020";
+        //given
         product.setProductCode(productCode);
         product.setProductName("Toyota");
         product.setProductLine("");
@@ -35,6 +58,7 @@ class ProductRepositoryTest {
 
     }
     @Test
+    @Rollback(value = false)
     void itShouldDecreaseStockQuantity() {
         //given
         short quantityBeforeSold = product.getQuantityInStock();
@@ -45,6 +69,10 @@ class ProductRepositoryTest {
         assertEquals(expected, quantityBeforeSold + 1);
     }
     @Test
+    @Rollback(value = false)
+    /****
+     * This tests increasing stock quantiy by 1
+     */
     void itShouldIncreaseStockQuantity() {
         //given
         short quantityBeforeSold = product.getQuantityInStock();
@@ -53,13 +81,19 @@ class ProductRepositoryTest {
         short expected = product.getQuantityInStock();
         //then
         assertEquals(expected, quantityBeforeSold - 1);
+
     }
     @Test
+    @Rollback(value = false)
+    /****
+     * This tests increasing stock for numbers > 1, eg. removing an item
+     * that has a quanity of 10 from virtual cart.
+     */
     void itShouldIncreaseStockQuantityBatch() {
         //given
         short quantityBeforeSold = product.getQuantityInStock();
         //when
-        productRepository.increaseStockQuantityBatch(quantityBeforeSold,product.getProductCode());
+        productRepository.increaseStockQuantityBatch(quantityBeforeSold, product.getProductCode());
         short expected = product.getQuantityInStock();
         //then
         assertEquals(expected, quantityBeforeSold + quantityBeforeSold);

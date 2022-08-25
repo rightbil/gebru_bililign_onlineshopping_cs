@@ -1,10 +1,8 @@
 package dev.cs.onlineshopping.models;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
-import java.lang.module.FindException;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

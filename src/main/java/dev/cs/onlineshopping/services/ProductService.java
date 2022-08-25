@@ -82,6 +82,7 @@ public class ProductService {
     public Product findProductByProductCode(String productcode) {
         return productRepository.findByProductCode(productcode);
     }
+
     public void deleteProduct(String productcode) {
         productRepository.delete(findProductByProductCode(productcode));
     }
