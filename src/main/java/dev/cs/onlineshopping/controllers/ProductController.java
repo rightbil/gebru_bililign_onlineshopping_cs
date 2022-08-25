@@ -44,7 +44,7 @@ public class ProductController {
         if (request.getParameter("size") != null && !request.getParameter("size").isEmpty()) {
             size = Integer.parseInt(request.getParameter("size"));
         }
-        model.addAttribute("products", productService.listAllStoreProducts(PageRequest.of(page, size)));
+        model.addAttribute("products", productService.listAllProducts(PageRequest.of(page, size)));
         return "productlist";
     }
     /****
@@ -59,7 +59,7 @@ public class ProductController {
         if (request.getParameter("size") != null && !request.getParameter("size").isEmpty()) {
             size = Integer.parseInt(request.getParameter("size"));
         }
-        model.addAttribute("products", productService.listAllStoreProducts(PageRequest.of(page, size)));
+        model.addAttribute("products", productService.listAllProducts(PageRequest.of(page, size)));
         return "productlist";
     }
     /****
@@ -116,6 +116,8 @@ public class ProductController {
     }
     @GetMapping("/admin")
     public String productDashboard(HttpServletRequest request, Model model) {
+
+
         int page = 0;
         int size = 5;
         if (request.getParameter("page") != null && !request.getParameter("page").isEmpty()) {
@@ -124,7 +126,7 @@ public class ProductController {
         if (request.getParameter("size") != null && !request.getParameter("size").isEmpty()) {
             size = Integer.parseInt(request.getParameter("size"));
         }
-        model.addAttribute("products", productService.listAllStoreProducts(PageRequest.of(page, size)));
+        model.addAttribute("products", productService.listAllProducts(PageRequest.of(page, size)));
         return "adminproduct";
     }
     @GetMapping("/admin/page")
@@ -136,7 +138,7 @@ public class ProductController {
         if (request.getParameter("size") != null && !request.getParameter("size").isEmpty()) {
             size = Integer.parseInt(request.getParameter("size"));
         }
-        model.addAttribute("products", productService.listAllStoreProducts(PageRequest.of(page, size)));
+        model.addAttribute("products", productService.listAllProducts(PageRequest.of(page, size)));
         return "adminproduct";
     }
     // Add
@@ -198,12 +200,11 @@ public class ProductController {
         return "productadd";
     }
     @GetMapping("/edit/{productcode}")
-    public ModelAndView updatProduct(@PathVariable("productcode") String productcode) {
+    public ModelAndView editProduct(@PathVariable("productcode") String productcode) {
         ModelAndView editview = new ModelAndView("productadd");
         Set<String> productcodes = new HashSet<>();
         for (ProductLine pl : productLineService.findAllProductLine()) {
             productcodes.add(pl.getProductLine());
-          //  S10_4757
         }
         editview.addObject("productlines", productcodes);
         Product product = productService.findProductByProductCode(productcode);

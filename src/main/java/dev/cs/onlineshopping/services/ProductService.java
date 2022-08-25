@@ -35,7 +35,7 @@ public class ProductService {
      * @param pageRequest the current page
      * @return return all products in the form of page
      */
-    public Page<Product> listAllStoreProducts(PageRequest pageRequest) {
+    public Page<Product> listAllProducts(PageRequest pageRequest) {
         //TODO filter this based on quantity > 0
         return productRepository.findAll(pageRequest);
     }
