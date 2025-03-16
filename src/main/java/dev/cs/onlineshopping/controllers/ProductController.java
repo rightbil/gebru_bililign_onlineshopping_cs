@@ -31,6 +31,13 @@ public class ProductController {
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
+
+   /* @GetMapping("/{product_code")
+    public Product showAllProducts(@PathVariable String product_code ) {
+
+        return productService.getProductByProductCode(product_code);
+    }*/
+
     /****
      *display all products for the customer - can also see the details or add to cart
      */

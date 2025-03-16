@@ -5,237 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="Presentation ready Code v 1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_29.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_65.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_65.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_65.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_9_0_65.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_10_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity5_3_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_15_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_15_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_bootstrap_3_3_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_3_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshopping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshopping.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/OnlineshoppingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/OnlineshoppingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lateruse/error 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lateruse/formtemplate 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lateruse/show 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lateruse/show 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lateruse/userform 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lateruse/userform 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application 2.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/customclassicmodel 2.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/customclassicmodel.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/OnlineshoppingApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/CustomerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/devmodels/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/devmodels/Office.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/dtos/ProductVirtualCartDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/exceptions/ProductAlreadyExistsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/exceptions/ProductNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/OrderDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/OrderDetailIdClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Orders.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Payment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Product$ProductBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/models/ProductLine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/CustomerRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/OrderDetailRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/OrdersRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/PaymentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/ProductLineRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/ProductRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/FieldMatch$List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/FieldMatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/FieldMatchValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/SecurityConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/UserRegistrationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/UserRegistrationDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/security/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/OrderDetailService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/OrdersService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/PaymentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/ProductLineService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/ProductService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/utility/HQL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/utility/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/cs 2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/cs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/blueplane 2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/car 2.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/car.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/cart 2.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/customer 2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/cycleguy 2.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/decorator.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/engine 2.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/engine.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/engine2 2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/exti 2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/fan.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/gage 2.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/greer 2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/greer.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/oldtrain.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/planefan 2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/shelf 2.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/testing 2.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/tire.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/wrench 2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/cs 2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/Just/customers 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/Orgbase 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admindb 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admindb.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminproduct 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminproduct 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminproduct.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/base 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/base 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/futuretemplate 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productadd 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productadd 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productadd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productcart 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productcart 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productcart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productdetail 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productdetail 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productdetail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productedit 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productedit 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productedit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productlist 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productlist 3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/productlist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/test 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/zproductdetailtableformatted 2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dev/cs/onlineshopping/repositories/ProductRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/CustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/CustomerService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,9 +73,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2CzLPxyQBoajrOJ1oCyTWz2SI0J" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -301,43 +83,43 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.OnlineshoppingApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JUnit.dev.cs.onlineshopping.controllers in onlineshopping.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/bgebru/Desktop/CS/gebru_bililign_onlineshopping_cs",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "f35bc06dfe2f9ddb3396e450460275e3"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.OnlineshoppingApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JUnit.dev.cs.onlineshopping.controllers in onlineshopping.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bgebru/Desktop/CS/gebru_bililign_onlineshopping_cs&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;f35bc06dfe2f9ddb3396e450460275e3&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
@@ -850,6 +632,17 @@
     <MESSAGE value="Code clean up css files formatting added." />
     <MESSAGE value="Presentation ready Code v 1.0" />
     <option name="LAST_COMMIT_MESSAGE" value="Presentation ready Code v 1.0" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

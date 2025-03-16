@@ -1,15 +1,17 @@
 package dev.cs.onlineshopping.controllers;
+import dev.cs.onlineshopping.models.Customer;
 import dev.cs.onlineshopping.services.CustomerService;
+import org.apache.coyote.Response;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 @Controller
-@RequestMapping("/customer")
+@RequestMapping("/customers")
 public class CustomerController {
     private final CustomerService customerService;
     public CustomerController(CustomerService customerService) {
@@ -41,5 +43,40 @@ public class CustomerController {
         model.addAttribute("customers", customerService.listAllCustomers(PageRequest.of(page, size)));
         return "admindb";
     }
+
+
+    // CRUD Operations using postman
+    // 1. get all
+    // GET  http://localhost:8080/customers/
+    @GetMapping("/")
+    public ResponseEntity<List<Customer>> getAllCustomers() {
+        List<Customer> customerList = customerService.listAllCustomers();
+        return ResponseEntity.ok(customerList);
+    }
+    // 2. get a single customer by using his id
+    // GET  http://localhost:8080/customers/103
+    @GetMapping("/{id}")
+    public ResponseEntity<Customer> getCustomerById(@PathVariable int id ) {
+        Customer customerById = customerService.findCustomerById(id);
+        return ResponseEntity.ok(customerById);
+    }
+
+    // 3. Edit a single customer by using his id
+    // GET  http://localhost:8080/customers/edit/103
+    //@GetMapping("/eidt/{id}")
+   // public ResponseEntity<Customer> updateCustomerById(@PathVariable int id ) {
+       // Customer customerById = customerService
+     //   return ResponseEntity.ok(customerById);
+    //}
+
+
+    // 4. Add a single customer
+    // GET  http://localhost:8080/customers/add
+    @GetMapping("/add")
+    public void addCustomer(@RequestBody Customer customer) {
+        customerService.addStudent(customer);
+    }
+
+
 
 }
