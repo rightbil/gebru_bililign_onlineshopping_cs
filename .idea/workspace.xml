@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18c6b780-d7f7-4079-8293-40265619d19f" name="Changes" comment="Presentation ready Code v 1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/repositories/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/services/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/controllers/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/repositories/CustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/cs/onlineshopping/services/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/cs/onlineshopping/security/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +129,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="dev.cs.onlineshopping.repositories" />
       <recent name="dev.cs.onlineshopping.controllers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dev.cs.onlineshopping.models" />
     </key>
   </component>
   <component name="RunManager" selected="Application.OnlineshoppingApplication">
